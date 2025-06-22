@@ -1,0 +1,1359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddObjectFormGroupNo" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="AddObjectFormNoOfObjectLabel" xml:space="preserve">
+    <value>How many objects to be added in this step?</value>
+  </data>
+  <data name="AddObjectFormObjectID" xml:space="preserve">
+    <value>Object ID</value>
+  </data>
+  <data name="AddObjectFormPos" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="AddObjectFormRot" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
+  <data name="AddObjectFormScale" xml:space="preserve">
+    <value>Scale</value>
+  </data>
+  <data name="AddObjectFormSrc" xml:space="preserve">
+    <value>Source Name</value>
+  </data>
+  <data name="AddObjectFormWindowName" xml:space="preserve">
+    <value>Add World Objects</value>
+  </data>
+  <data name="ADVEndStepHeader" xml:space="preserve">
+    <value>ADV End</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>Custom Event Editor v{0}</value>
+  </data>
+  <data name="BackgroundStepGroupLabel" xml:space="preserve">
+    <value>Background</value>
+  </data>
+  <data name="BackgroundStepHeader" xml:space="preserve">
+    <value>Background</value>
+  </data>
+  <data name="BackgroundStepPrefabNameDayLabel" xml:space="preserve">
+    <value>Background Name - Day</value>
+  </data>
+  <data name="BackgroundStepPrefabNameNightLabel" xml:space="preserve">
+    <value>Background Name - Night</value>
+  </data>
+  <data name="BasicInfoGroupLabel" xml:space="preserve">
+    <value>Basic Info</value>
+  </data>
+  <data name="BasicInfoNextStepLabel" xml:space="preserve">
+    <value>Next Step ID</value>
+  </data>
+  <data name="BasicInfoStepIDLabel" xml:space="preserve">
+    <value>Step ID</value>
+  </data>
+  <data name="BasicInfoStepNameLabel" xml:space="preserve">
+    <value>Step Name</value>
+  </data>
+  <data name="BasicInfoWaitingTypeLabel" xml:space="preserve">
+    <value>Waiting Type</value>
+  </data>
+  <data name="BGMStepFileNameLabel" xml:space="preserve">
+    <value>File Name</value>
+  </data>
+  <data name="BGMStepGroupLabel" xml:space="preserve">
+    <value>BGM</value>
+  </data>
+  <data name="BGMStepHeader" xml:space="preserve">
+    <value>BGM</value>
+  </data>
+  <data name="BodyPartTypeAss" xml:space="preserve">
+    <value>Ass</value>
+  </data>
+  <data name="BodyPartTypeBack" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="BodyPartTypeBelly" xml:space="preserve">
+    <value>Belly</value>
+  </data>
+  <data name="BodyPartTypeBreast" xml:space="preserve">
+    <value>Breast</value>
+  </data>
+  <data name="BodyPartTypeFace" xml:space="preserve">
+    <value>Face</value>
+  </data>
+  <data name="BodyPartTypeMouth" xml:space="preserve">
+    <value>Mouth</value>
+  </data>
+  <data name="BodyPartTypeVagina" xml:space="preserve">
+    <value>Vagina</value>
+  </data>
+  <data name="BranchFormNextStepID" xml:space="preserve">
+    <value>Next Step ID</value>
+  </data>
+  <data name="BranchFormValue" xml:space="preserve">
+    <value>Variable Value</value>
+  </data>
+  <data name="BranchingFormComparativeMethodLabel" xml:space="preserve">
+    <value>Comparative Method</value>
+  </data>
+  <data name="BranchingFormNoOfBranchLabel" xml:space="preserve">
+    <value>How many branches in this step?</value>
+  </data>
+  <data name="BranchingFormVariableNameLabel" xml:space="preserve">
+    <value>Variable to be based on when branching</value>
+  </data>
+  <data name="BranchingFormVariableTypeLabel" xml:space="preserve">
+    <value>VariableType</value>
+  </data>
+  <data name="BranchingFormWindowName" xml:space="preserve">
+    <value>Edit Branches</value>
+  </data>
+  <data name="BranchingStepGroupLabel" xml:space="preserve">
+    <value>Branching</value>
+  </data>
+  <data name="BranchingStepHeader" xml:space="preserve">
+    <value>Branching</value>
+  </data>
+  <data name="BranchStepBranchCountLabel" xml:space="preserve">
+    <value>No. of branches</value>
+  </data>
+  <data name="CameraStepAroundAngleLabel" xml:space="preserve">
+    <value>Angles</value>
+  </data>
+  <data name="CameraStepBlurCameraLabel" xml:space="preserve">
+    <value>Blur Effect</value>
+  </data>
+  <data name="CameraStepBlurCameraNoChangeLabel" xml:space="preserve">
+    <value>Unchanged</value>
+  </data>
+  <data name="CameraStepCameraDataParserLabel" xml:space="preserve">
+    <value>Camera Data Parser</value>
+  </data>
+  <data name="CameraStepCameraPanLabel" xml:space="preserve">
+    <value>Smooth Camera Movement</value>
+  </data>
+  <data name="CameraStepDistanceLabel" xml:space="preserve">
+    <value>Camera Distance</value>
+  </data>
+  <data name="CameraStepGroupLabel" xml:space="preserve">
+    <value>Camera</value>
+  </data>
+  <data name="CameraStepHeader" xml:space="preserve">
+    <value>Camera</value>
+  </data>
+  <data name="CameraStepLockCameraBlurLabel" xml:space="preserve">
+    <value>Add Blur</value>
+  </data>
+  <data name="CameraStepLockCameraLabel" xml:space="preserve">
+    <value>Lock Camera</value>
+  </data>
+  <data name="CameraStepLockCameraLockedLabel" xml:space="preserve">
+    <value>Locked</value>
+  </data>
+  <data name="CameraStepLockCameraNoChangeLabel" xml:space="preserve">
+    <value>Unchanged</value>
+  </data>
+  <data name="CameraStepLockCameraUnblurLabel" xml:space="preserve">
+    <value>Remove Blur</value>
+  </data>
+  <data name="CameraStepLockCameraUnlockedLabel" xml:space="preserve">
+    <value>Unlocked</value>
+  </data>
+  <data name="CameraStepPanningDurationLabel" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="CameraStepPosStringLabel" xml:space="preserve">
+    <value>Camera Position</value>
+  </data>
+  <data name="CameraStepTargetPositionLabel" xml:space="preserve">
+    <value>Target Position</value>
+  </data>
+  <data name="CharaInitFemaleNPCCountLabel" xml:space="preserve">
+    <value>No. of female NPC:</value>
+  </data>
+  <data name="CharaInitMaleNPCCountLabel" xml:space="preserve">
+    <value>No. of male NPC:</value>
+  </data>
+  <data name="CharaInitManCountLabel" xml:space="preserve">
+    <value>Number of Men</value>
+  </data>
+  <data name="CharaInitStepHeader" xml:space="preserve">
+    <value>Character Initialization</value>
+  </data>
+  <data name="CharaInitStepManSettingGroupLabel" xml:space="preserve">
+    <value>Man Character Setting</value>
+  </data>
+  <data name="CharaInitStepManTypeMiddleAged" xml:space="preserve">
+    <value>Middle-aged Man</value>
+  </data>
+  <data name="CharaInitStepManTypeOtaku" xml:space="preserve">
+    <value>Otaku</value>
+  </data>
+  <data name="CharaInitStepManTypeShota" xml:space="preserve">
+    <value>Shota</value>
+  </data>
+  <data name="CharaInitStepManTypeYanki" xml:space="preserve">
+    <value>Bad Boy</value>
+  </data>
+  <data name="CharaInitStepManTypeYoungMan" xml:space="preserve">
+    <value>Young Man</value>
+  </data>
+  <data name="CharaInitStepNPCGroupLabel" xml:space="preserve">
+    <value>NPC</value>
+  </data>
+  <data name="CharaStatusFieldBust" xml:space="preserve">
+    <value>Bust</value>
+  </data>
+  <data name="CharaStatusFieldCare" xml:space="preserve">
+    <value>Care</value>
+  </data>
+  <data name="CharaStatusFieldCharm" xml:space="preserve">
+    <value>Charm</value>
+  </data>
+  <data name="CharaStatusFieldCooking" xml:space="preserve">
+    <value>Cooking</value>
+  </data>
+  <data name="CharaStatusFieldCup" xml:space="preserve">
+    <value>Cup Size</value>
+  </data>
+  <data name="CharaStatusFieldDance" xml:space="preserve">
+    <value>Dance</value>
+  </data>
+  <data name="CharaStatusFieldElegance" xml:space="preserve">
+    <value>Elegance</value>
+  </data>
+  <data name="CharaStatusFieldHeight" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="CharaStatusFieldHentai" xml:space="preserve">
+    <value>Hentai</value>
+  </data>
+  <data name="CharaStatusFieldHeroineType" xml:space="preserve">
+    <value>Heroine Type</value>
+  </data>
+  <data name="CharaStatusFieldHip" xml:space="preserve">
+    <value>Hip</value>
+  </data>
+  <data name="CharaStatusFieldHoushi" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="CharaStatusFieldInyoku" xml:space="preserve">
+    <value>Lust</value>
+  </data>
+  <data name="CharaStatusFieldLikability" xml:space="preserve">
+    <value>Favor</value>
+  </data>
+  <data name="CharaStatusFieldLovely" xml:space="preserve">
+    <value>Cuteness</value>
+  </data>
+  <data name="CharaStatusFieldMValue" xml:space="preserve">
+    <value>M-nature</value>
+  </data>
+  <data name="CharaStatusFieldNightWorkCount" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="CharaStatusFieldReception" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="CharaStatusFieldSexExperienceAnal" xml:space="preserve">
+    <value>Sex Experience (Anal)</value>
+  </data>
+  <data name="CharaStatusFieldSexExperienceVaginal" xml:space="preserve">
+    <value>Sex Experience (Vaginal)</value>
+  </data>
+  <data name="CharaStatusFieldSexNumOfPeople" xml:space="preserve">
+    <value>Sex Experience (Number of people)</value>
+  </data>
+  <data name="CharaStatusFieldVocal" xml:space="preserve">
+    <value>Vocal</value>
+  </data>
+  <data name="CharaStatusFieldWaist" xml:space="preserve">
+    <value>Waist</value>
+  </data>
+  <data name="CharaStatusFieldWeight" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="CharaStatusFieldYotogiCount" xml:space="preserve">
+    <value>Yotogi(s)</value>
+  </data>
+  <data name="CharaStepBlushingAndTearChangeLabel" xml:space="preserve">
+    <value>Update on Blushing and Tear Level?</value>
+  </data>
+  <data name="CharaStepBlushingLevelLabel" xml:space="preserve">
+    <value>Blushing</value>
+  </data>
+  <data name="CharaStepCoordinatesGroupLabel" xml:space="preserve">
+    <value>Coordinates</value>
+  </data>
+  <data name="CharaStepEyeSightCameraLabel" xml:space="preserve">
+    <value>Camera</value>
+  </data>
+  <data name="CharaStepEyeSightCameraTypeLabel" xml:space="preserve">
+    <value>How should the character look at the camera?</value>
+  </data>
+  <data name="CharaStepEyeSightCharacterLabel" xml:space="preserve">
+    <value>Character</value>
+  </data>
+  <data name="CharaStepEyeSightCharacterTypeLabel" xml:space="preserve">
+    <value>Target Type</value>
+  </data>
+  <data name="CharaStepEyeSightCharaPositionLabel" xml:space="preserve">
+    <value>List Position</value>
+  </data>
+  <data name="CharaStepEyeSightGroupLabel" xml:space="preserve">
+    <value>Eye Sight</value>
+  </data>
+  <data name="CharaStepEyeSightGroupPositionLabel" xml:space="preserve">
+    <value>Group Index</value>
+  </data>
+  <data name="CharaStepEyeSightGroupTargetLabel" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="CharaStepEyeSightTypeLabel" xml:space="preserve">
+    <value>Eye Sight To</value>
+  </data>
+  <data name="CharaStepFaceAnimLabel" xml:space="preserve">
+    <value>Face Anim</value>
+  </data>
+  <data name="CharaStepHeader" xml:space="preserve">
+    <value>Character</value>
+  </data>
+  <data name="CharaStepManNudeLabel" xml:space="preserve">
+    <value>Nude</value>
+  </data>
+  <data name="CharaStepMotionAnimationFileLabel" xml:space="preserve">
+    <value>Animation File</value>
+  </data>
+  <data name="CharaStepMotionAnimationLabel" xml:space="preserve">
+    <value>Animation File</value>
+  </data>
+  <data name="CharaStepMotionCustomAnimationFileLabel" xml:space="preserve">
+    <value>Custom Animation</value>
+  </data>
+  <data name="CharaStepMotionCustomAnimationLabel" xml:space="preserve">
+    <value>Custom Animation</value>
+  </data>
+  <data name="CharaStepMotionGroupLabel" xml:space="preserve">
+    <value>Motion</value>
+  </data>
+  <data name="CharaStepMotionLoopMotionLabel" xml:space="preserve">
+    <value>Loop Motion</value>
+  </data>
+  <data name="CharaStepMotionScriptLabel" xml:space="preserve">
+    <value>Motion Script</value>
+  </data>
+  <data name="CharaStepMotionSmoothMotionTransitionLabel" xml:space="preserve">
+    <value>Smooth Motion Transition</value>
+  </data>
+  <data name="CharaStepMotionTypeLabel" xml:space="preserve">
+    <value>Motion Source Type</value>
+  </data>
+  <data name="CharaStepOpenMouthLabel" xml:space="preserve">
+    <value>Mouth Open</value>
+  </data>
+  <data name="CharaStepSmoothMovementDurationLabel" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="CharaStepSmoothMovementLabel" xml:space="preserve">
+    <value>Smooth Movement</value>
+  </data>
+  <data name="CharaStepStatusGroupLabel" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="CharaStepTargetGroupLabel" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="CharaStepTargetTypeLabel" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="CharaStepTearLevelLabel" xml:space="preserve">
+    <value>Tear</value>
+  </data>
+  <data name="CharaStepVisibleLabel" xml:space="preserve">
+    <value>Visible</value>
+  </data>
+  <data name="CloseAppMessage" xml:space="preserve">
+    <value>You are about to close the editor. Any unsaved progress will be lost. Are you sure to close?</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EndPointText" xml:space="preserve">
+    <value>ADV End</value>
+  </data>
+  <data name="ErrorDuplicateStepID" xml:space="preserve">
+    <value>Duplicate Step ID. Step ID needs to be unique.</value>
+  </data>
+  <data name="ErrorStepIDNotFound" xml:space="preserve">
+    <value>The Step ID does not exist.</value>
+  </data>
+  <data name="ErrorStepIDPointToItself" xml:space="preserve">
+    <value>The Next Step cannot be pointing to the step itself.</value>
+  </data>
+  <data name="EvaluateInput1GroupLabel" xml:space="preserve">
+    <value>Input 1</value>
+  </data>
+  <data name="EvaluateInput2GroupLabel" xml:space="preserve">
+    <value>Input 2</value>
+  </data>
+  <data name="EvaluateInputFieldNameLabel" xml:space="preserve">
+    <value>Status Field Name</value>
+  </data>
+  <data name="EvaluateInputFixedValueLabel" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="EvaluateInputFixedValueTypeLabel" xml:space="preserve">
+    <value>Value Type</value>
+  </data>
+  <data name="EvaluateInputListPositionLabel" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="EvaluateInputListTypeLabel" xml:space="preserve">
+    <value>List Type</value>
+  </data>
+  <data name="EvaluateInputSourceTypeCharaStatusLabel" xml:space="preserve">
+    <value>Character Status</value>
+  </data>
+  <data name="EvaluateInputSourceTypeFixedValueLabel" xml:space="preserve">
+    <value>Fixed Value</value>
+  </data>
+  <data name="EvaluateInputSourceTypeLabel" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="EvaluateInputSourceTypeVariableLabel" xml:space="preserve">
+    <value>Variable</value>
+  </data>
+  <data name="EvaluateInputVariableNameLabel" xml:space="preserve">
+    <value>Variable Name</value>
+  </data>
+  <data name="EvaluateStepHeader" xml:space="preserve">
+    <value>Evaluate</value>
+  </data>
+  <data name="EvaluateStepOperationGroupLabel" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="EvaluateStepOperationTypeLabel" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="EvaluateStepResultVariableLabel" xml:space="preserve">
+    <value>Result variable name</value>
+  </data>
+  <data name="EyeSightCameraType_EyeballAvoidEyeContact" xml:space="preserve">
+    <value>Eye ball avoiding the gaze</value>
+  </data>
+  <data name="EyeSightCameraType_FaceTowardsOnly" xml:space="preserve">
+    <value>Face towards Camera but eyes dont look at it</value>
+  </data>
+  <data name="EyeSightCameraType_Ignore" xml:space="preserve">
+    <value>Ignore Camera</value>
+  </data>
+  <data name="EyeSightCameraType_LookAtCamera" xml:space="preserve">
+    <value>Face move and Look at Camera</value>
+  </data>
+  <data name="EyeSightCameraType_MoveEyeballOnly" xml:space="preserve">
+    <value>Eye ball look at Camera only</value>
+  </data>
+  <data name="EyeSightCameraType_MoveFaceOnly" xml:space="preserve">
+    <value>Move the face only</value>
+  </data>
+  <data name="EyeSightCameraType_TurnAway" xml:space="preserve">
+    <value>Turn away</value>
+  </data>
+  <data name="FadingStepDurationLabel" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="FadingStepFadeColorBlackLabel" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="FadingStepFadeColorLabel" xml:space="preserve">
+    <value>Fade Color</value>
+  </data>
+  <data name="FadingStepFadeColorWhiteLabel" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="FadingStepFadeInLabel" xml:space="preserve">
+    <value>Fade In</value>
+  </data>
+  <data name="FadingStepFadeOutLabel" xml:space="preserve">
+    <value>Fade Out</value>
+  </data>
+  <data name="FadingStepGroupLabel" xml:space="preserve">
+    <value>Fading</value>
+  </data>
+  <data name="FadingStepHeader" xml:space="preserve">
+    <value>Fading</value>
+  </data>
+  <data name="FadingStepTypeLabel" xml:space="preserve">
+    <value>Fading Type</value>
+  </data>
+  <data name="GroupManagementStepDismissAllLabel" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="GroupManagementStepDismissGroupByIndexLabel" xml:space="preserve">
+    <value>By Group Index</value>
+  </data>
+  <data name="GroupManagementStepDismissGroupCountLabel" xml:space="preserve">
+    <value>No. of Groups dismissed:</value>
+  </data>
+  <data name="GroupManagementStepDismissGroupLabel" xml:space="preserve">
+    <value>Dismiss Group</value>
+  </data>
+  <data name="GroupManagementStepDismissGroupTypeLabel" xml:space="preserve">
+    <value>Dismiss Group</value>
+  </data>
+  <data name="GroupManagementStepGroupLabel" xml:space="preserve">
+    <value>Group Management</value>
+  </data>
+  <data name="GroupManagementStepHeader" xml:space="preserve">
+    <value>Group Management</value>
+  </data>
+  <data name="GroupManagementStepListPositionLabel" xml:space="preserve">
+    <value>List Position</value>
+  </data>
+  <data name="GroupManagementStepMakeGroupCountLabel" xml:space="preserve">
+    <value>No. of Groups made:</value>
+  </data>
+  <data name="GroupManagementStepMakeGroupLabel" xml:space="preserve">
+    <value>Make Group</value>
+  </data>
+  <data name="GroupManagementStepTypeLabel" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="GroupMemberTypeMaid1" xml:space="preserve">
+    <value>Maid 1</value>
+  </data>
+  <data name="GroupMemberTypeMaid2" xml:space="preserve">
+    <value>Maid 2</value>
+  </data>
+  <data name="GroupMemberTypeMan1" xml:space="preserve">
+    <value>Man 1</value>
+  </data>
+  <data name="GroupMemberTypeMan2" xml:space="preserve">
+    <value>Man 2</value>
+  </data>
+  <data name="GroupMemberTypeMan3" xml:space="preserve">
+    <value>Man 3</value>
+  </data>
+  <data name="GroupMotionCoordinatesGroupLabel" xml:space="preserve">
+    <value>Coordinates</value>
+  </data>
+  <data name="GroupMotionIndvFormWindowName" xml:space="preserve">
+    <value>Individual Setting</value>
+  </data>
+  <data name="GroupMotionStepBlockClickLabel" xml:space="preserve">
+    <value>Block User Click until motion ends.</value>
+  </data>
+  <data name="GroupMotionStepDetailSetupGroupLabel" xml:space="preserve">
+    <value>Individual Setup</value>
+  </data>
+  <data name="GroupMotionStepHeader" xml:space="preserve">
+    <value>Group Motion</value>
+  </data>
+  <data name="GroupMotionStepIndvSetupInstuctionLabel" xml:space="preserve">
+    <value>Please check only those that needs to be updated.</value>
+  </data>
+  <data name="GroupMotionStepMotionGroupLabel" xml:space="preserve">
+    <value>Motion</value>
+  </data>
+  <data name="GroupMotionStepTargetGroupLabel" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="GroupMotionStepTargetPositionLabel" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="GroupTypeFF" xml:space="preserve">
+    <value>FF</value>
+  </data>
+  <data name="GroupTypeFFM" xml:space="preserve">
+    <value>FFM</value>
+  </data>
+  <data name="GroupTypeInvalid" xml:space="preserve">
+    <value>Invalid</value>
+  </data>
+  <data name="GroupTypeMF" xml:space="preserve">
+    <value>MF</value>
+  </data>
+  <data name="GroupTypeMMF" xml:space="preserve">
+    <value>MMF</value>
+  </data>
+  <data name="GroupTypeMMMF" xml:space="preserve">
+    <value>3M1F</value>
+  </data>
+  <data name="InvalidFormat" xml:space="preserve">
+    <value>The format of the input text is invalid.</value>
+  </data>
+  <data name="InvalidFormatFloatingPointNumber" xml:space="preserve">
+    <value>Please input a floating point number</value>
+  </data>
+  <data name="InvalidInput" xml:space="preserve">
+    <value>Invalid Input</value>
+  </data>
+  <data name="InvalidInputEndTime" xml:space="preserve">
+    <value>End Time cannot be earlier than Start Time</value>
+  </data>
+  <data name="InvalidInputStartTime" xml:space="preserve">
+    <value>Start Time cannot be later than End Time</value>
+  </data>
+  <data name="MakeGroupFormGroupNo" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="MakeGroupFormGroupType" xml:space="preserve">
+    <value>Group Type</value>
+  </data>
+  <data name="MakeGroupFormMaid1Index" xml:space="preserve">
+    <value>Maid 1 Index</value>
+  </data>
+  <data name="MakeGroupFormMaid1Type" xml:space="preserve">
+    <value>Maid 1 Type</value>
+  </data>
+  <data name="MakeGroupFormMaid2Index" xml:space="preserve">
+    <value>Maid 2 Index</value>
+  </data>
+  <data name="MakeGroupFormMaid2Type" xml:space="preserve">
+    <value>Maid 2 Type</value>
+  </data>
+  <data name="MakeGroupFormMan1Index" xml:space="preserve">
+    <value>Man 1 Index</value>
+  </data>
+  <data name="MakeGroupFormMan1Type" xml:space="preserve">
+    <value>Man 1 Type</value>
+  </data>
+  <data name="MakeGroupFormMan2Index" xml:space="preserve">
+    <value>Man 2 Index</value>
+  </data>
+  <data name="MakeGroupFormMan2Type" xml:space="preserve">
+    <value>Man 2 Type</value>
+  </data>
+  <data name="MakeGroupFormMan3Index" xml:space="preserve">
+    <value>Man 3 Index</value>
+  </data>
+  <data name="MakeGroupFormMan3Type" xml:space="preserve">
+    <value>Man 3 Type</value>
+  </data>
+  <data name="MakeGroupFormNoOfGroupLabel" xml:space="preserve">
+    <value>How many groups to be added in this step?</value>
+  </data>
+  <data name="MakeGroupFormWindowName" xml:space="preserve">
+    <value>Group Settings</value>
+  </data>
+  <data name="MakeGroupTypeMaid" xml:space="preserve">
+    <value>Maid</value>
+  </data>
+  <data name="MakeGroupTypeMan" xml:space="preserve">
+    <value>Man</value>
+  </data>
+  <data name="MakeGroupTypeNotSelect" xml:space="preserve">
+    <value>Not Select</value>
+  </data>
+  <data name="MakeGroupTypeNPCFemale" xml:space="preserve">
+    <value>NPC - Female</value>
+  </data>
+  <data name="MakeGroupTypeNPCMale" xml:space="preserve">
+    <value>NPC - Male</value>
+  </data>
+  <data name="MakeGroupTypeOwner" xml:space="preserve">
+    <value>Master</value>
+  </data>
+  <data name="MenuBackgroundText" xml:space="preserve">
+    <value>場景背景</value>
+  </data>
+  <data name="MenuBGMText" xml:space="preserve">
+    <value>背景音樂</value>
+  </data>
+  <data name="MenuBranchText" xml:space="preserve">
+    <value>分支</value>
+  </data>
+  <data name="MenuCameraText" xml:space="preserve">
+    <value>視點</value>
+  </data>
+  <data name="MenuCharaStepText" xml:space="preserve">
+    <value>角色配置</value>
+  </data>
+  <data name="MenuEndText" xml:space="preserve">
+    <value>劇本完結</value>
+  </data>
+  <data name="MenuEvaluateText" xml:space="preserve">
+    <value>計算</value>
+  </data>
+  <data name="MenuFadeInFadeOutText" xml:space="preserve">
+    <value>Fade In / Fade Out</value>
+  </data>
+  <data name="MenuGroupActionText" xml:space="preserve">
+    <value>小組動作</value>
+  </data>
+  <data name="MenuGroupManagementText" xml:space="preserve">
+    <value>小組管理</value>
+  </data>
+  <data name="MenuSEText" xml:space="preserve">
+    <value>聲效</value>
+  </data>
+  <data name="MenuShowChoices" xml:space="preserve">
+    <value>Show Choices</value>
+  </data>
+  <data name="MenuTalkStepText" xml:space="preserve">
+    <value>對白</value>
+  </data>
+  <data name="MenuTextureManagementText" xml:space="preserve">
+    <value>紋理</value>
+  </data>
+  <data name="MenuTimeWaitText" xml:space="preserve">
+    <value>時間等待</value>
+  </data>
+  <data name="MenuWorldObjectText" xml:space="preserve">
+    <value>物件</value>
+  </data>
+  <data name="NewWarning" xml:space="preserve">
+    <value>You are about to create a new event. Any unsaved progress will be lost. Are you sure to continue?</value>
+  </data>
+  <data name="NPCFemaleFormCustomNPCLabel" xml:space="preserve">
+    <value>CustomNPC</value>
+  </data>
+  <data name="NPCFemaleFormNoOfNPCLabel" xml:space="preserve">
+    <value>How many female NPCs are required in this event?</value>
+  </data>
+  <data name="NPCFemaleFormNPCType" xml:space="preserve">
+    <value>NPC Type</value>
+  </data>
+  <data name="NPCFemaleFormOfficalNPCLabel" xml:space="preserve">
+    <value>Official NPC</value>
+  </data>
+  <data name="NPCFemaleFormOfficialNPCName" xml:space="preserve">
+    <value>NPC Name</value>
+  </data>
+  <data name="NPCFemaleFormPresetV2" xml:space="preserve">
+    <value>V2 Preset File</value>
+  </data>
+  <data name="NPCFemaleFormPresetV2_5" xml:space="preserve">
+    <value>V2.5 Preset File</value>
+  </data>
+  <data name="NPCFemaleFormVoicePitch" xml:space="preserve">
+    <value>Pitch [0-100]</value>
+  </data>
+  <data name="NPCFemaleFormWindowName" xml:space="preserve">
+    <value>NPC Female Settings</value>
+  </data>
+  <data name="NPCFormFemaleNPCLabel" xml:space="preserve">
+    <value>Female NPC</value>
+  </data>
+  <data name="NPCFormFirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="NPCFormLastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="NPCFormMaleNPCLabel" xml:space="preserve">
+    <value>Male NPC</value>
+  </data>
+  <data name="NPCFormName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NPCFormNickName" xml:space="preserve">
+    <value>Nick Name</value>
+  </data>
+  <data name="NPCFormNPCNo" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="NPCFormTypeCustom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="NPCFormTypeOfficial" xml:space="preserve">
+    <value>Official</value>
+  </data>
+  <data name="NPCFormWayToCall" xml:space="preserve">
+    <value>Way To Call</value>
+  </data>
+  <data name="NPCFormWayToCallFirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="NPCFormWayToCallLastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="NPCFormWayToCallNickName" xml:space="preserve">
+    <value>Nick Name</value>
+  </data>
+  <data name="NPCMaleFormBodySize" xml:space="preserve">
+    <value>Body Size [0-100]</value>
+  </data>
+  <data name="NPCMaleFormClothed" xml:space="preserve">
+    <value>Clothed</value>
+  </data>
+  <data name="NPCMaleFormColor" xml:space="preserve">
+    <value>Color [Hex]</value>
+  </data>
+  <data name="NPCMaleFormHead" xml:space="preserve">
+    <value>Head</value>
+  </data>
+  <data name="NPCMaleFormNoOfNPCLabel" xml:space="preserve">
+    <value>How many male NPCs are required in this event?</value>
+  </data>
+  <data name="NPCMaleFormNude" xml:space="preserve">
+    <value>Nude</value>
+  </data>
+  <data name="NPCMaleFormWindowName" xml:space="preserve">
+    <value>NPC Male Settings</value>
+  </data>
+  <data name="OpenFileErrorIncorrectFormat" xml:space="preserve">
+    <value>Load Scenario Data Failed - Incorrect File Format.</value>
+  </data>
+  <data name="OpenFileWarning" xml:space="preserve">
+    <value>You are about to open a file. Any unsaved progress will be lost. Are you sure to continue?</value>
+  </data>
+  <data name="OperationTypeAddition" xml:space="preserve">
+    <value>Addition (+)</value>
+  </data>
+  <data name="OperationTypeAssignment" xml:space="preserve">
+    <value>Assignment (=)</value>
+  </data>
+  <data name="OperationTypeConcatenation" xml:space="preserve">
+    <value>Concatenation (&amp;)</value>
+  </data>
+  <data name="OperationTypeDivision" xml:space="preserve">
+    <value>Division (/)</value>
+  </data>
+  <data name="OperationTypeEqual" xml:space="preserve">
+    <value>Equal (==)</value>
+  </data>
+  <data name="OperationTypeGreaterThan" xml:space="preserve">
+    <value>Greater Than (&gt;)</value>
+  </data>
+  <data name="OperationTypeGreaterThanEqualTo" xml:space="preserve">
+    <value>Greater Than or Equal To (&gt;=)</value>
+  </data>
+  <data name="OperationTypeLessThan" xml:space="preserve">
+    <value>Less Than (&lt;)</value>
+  </data>
+  <data name="OperationTypeLessThanEqualTo" xml:space="preserve">
+    <value>Less Than or Equal To (&lt;=)</value>
+  </data>
+  <data name="OperationTypeLogicalAnd" xml:space="preserve">
+    <value>Logical And (&amp;&amp;)</value>
+  </data>
+  <data name="OperationTypeLogicalOr" xml:space="preserve">
+    <value>Logical Or (||)</value>
+  </data>
+  <data name="OperationTypeMultiplication" xml:space="preserve">
+    <value>Multiplication (*)</value>
+  </data>
+  <data name="OperationTypeNegation" xml:space="preserve">
+    <value>Negation (!)</value>
+  </data>
+  <data name="OperationTypeNotEqual" xml:space="preserve">
+    <value>Not Equal (!=)</value>
+  </data>
+  <data name="OperationTypeSubtraction" xml:space="preserve">
+    <value>Subtraction (-)</value>
+  </data>
+  <data name="OptionFormDisplayText" xml:space="preserve">
+    <value>Option Display Text</value>
+  </data>
+  <data name="OptionFormKey" xml:space="preserve">
+    <value>Option Value</value>
+  </data>
+  <data name="OptionFormNoOfOptionsLabel" xml:space="preserve">
+    <value>How many options to be displayed?</value>
+  </data>
+  <data name="OptionFormWindowName" xml:space="preserve">
+    <value>Edit Options</value>
+  </data>
+  <data name="OptionNone" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="OptionNPC" xml:space="preserve">
+    <value>NPC</value>
+  </data>
+  <data name="Parse" xml:space="preserve">
+    <value>Parse</value>
+  </data>
+  <data name="PersonalityAnesan" xml:space="preserve">
+    <value>Oneechan</value>
+  </data>
+  <data name="PersonalityChildhood" xml:space="preserve">
+    <value>ChildhoodFriend</value>
+  </data>
+  <data name="PersonalityCool" xml:space="preserve">
+    <value>Kuudere</value>
+  </data>
+  <data name="PersonalityCunning" xml:space="preserve">
+    <value>Cunning</value>
+  </data>
+  <data name="PersonalityCurtness" xml:space="preserve">
+    <value>Wary</value>
+  </data>
+  <data name="PersonalityDame" xml:space="preserve">
+    <value>Lady</value>
+  </data>
+  <data name="PersonalityDevilish" xml:space="preserve">
+    <value>Koakuma</value>
+  </data>
+  <data name="PersonalityFriendly" xml:space="preserve">
+    <value>Friendly</value>
+  </data>
+  <data name="PersonalityGenki" xml:space="preserve">
+    <value>Genki</value>
+  </data>
+  <data name="PersonalityGyaru" xml:space="preserve">
+    <value>Gyaru</value>
+  </data>
+  <data name="PersonalityLadylike" xml:space="preserve">
+    <value>Anesan</value>
+  </data>
+  <data name="PersonalityMajime" xml:space="preserve">
+    <value>Majime</value>
+  </data>
+  <data name="PersonalityMasochist" xml:space="preserve">
+    <value>Masochist</value>
+  </data>
+  <data name="PersonalityMissy" xml:space="preserve">
+    <value>Ojou</value>
+  </data>
+  <data name="PersonalityMuku" xml:space="preserve">
+    <value>Muku</value>
+  </data>
+  <data name="PersonalityPride" xml:space="preserve">
+    <value>Tsudere</value>
+  </data>
+  <data name="PersonalityPure" xml:space="preserve">
+    <value>Innocent</value>
+  </data>
+  <data name="PersonalityRindere" xml:space="preserve">
+    <value>Rindere</value>
+  </data>
+  <data name="PersonalitySadist" xml:space="preserve">
+    <value>Sadist</value>
+  </data>
+  <data name="PersonalitySecretary" xml:space="preserve">
+    <value>MaidSecretary</value>
+  </data>
+  <data name="PersonalitySilent" xml:space="preserve">
+    <value>Silent</value>
+  </data>
+  <data name="PersonalitySister" xml:space="preserve">
+    <value>Fluffy</value>
+  </data>
+  <data name="PersonalityYandere" xml:space="preserve">
+    <value>Yandere</value>
+  </data>
+  <data name="PFormMaidNo" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="PFormNumOfMaids" xml:space="preserve">
+    <value>How many maids are required in this event?</value>
+  </data>
+  <data name="PFormWindowName" xml:space="preserve">
+    <value>Maids Setting</value>
+  </data>
+  <data name="PickColor" xml:space="preserve">
+    <value>Pick Color</value>
+  </data>
+  <data name="Pos" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="RequireUpdate" xml:space="preserve">
+    <value>Requires Update?</value>
+  </data>
+  <data name="Rot" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
+  <data name="ScnInfoAuthorLabel" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="ScnInfoEventContentLabel" xml:space="preserve">
+    <value>Event Content</value>
+  </data>
+  <data name="ScnInfoHeader" xml:space="preserve">
+    <value>劇本資訊</value>
+  </data>
+  <data name="ScnInfoIconLabel" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="ScnInfoLanguageLabel" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="ScnInfoMaidRequirementLabel" xml:space="preserve">
+    <value>Maids Setting</value>
+  </data>
+  <data name="ScnInfoTitleLabel" xml:space="preserve">
+    <value>劇本名稱</value>
+  </data>
+  <data name="ScriptFileLabel" xml:space="preserve">
+    <value>Script File</value>
+  </data>
+  <data name="ScriptLabelLabel" xml:space="preserve">
+    <value>Script Label</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="SelectFile" xml:space="preserve">
+    <value>Select File</value>
+  </data>
+  <data name="SEStepFileNameLabel" xml:space="preserve">
+    <value>File Name</value>
+  </data>
+  <data name="SEStepGroupLabel" xml:space="preserve">
+    <value>Sound Effect</value>
+  </data>
+  <data name="SEStepHeader" xml:space="preserve">
+    <value>Sound Effect</value>
+  </data>
+  <data name="SEStepLoopSELabel" xml:space="preserve">
+    <value>Loop SE</value>
+  </data>
+  <data name="SEStepStopSELabel" xml:space="preserve">
+    <value>Stop all playing SE</value>
+  </data>
+  <data name="ShowOptionStepGroupLabel" xml:space="preserve">
+    <value>Show Option</value>
+  </data>
+  <data name="ShowOptionStepHeader" xml:space="preserve">
+    <value>Show Option</value>
+  </data>
+  <data name="ShowOptionStepOptionCountLabel" xml:space="preserve">
+    <value>Option Count</value>
+  </data>
+  <data name="ShowOptionStepVariableNameLabel" xml:space="preserve">
+    <value>Name of variable to be saved to:</value>
+  </data>
+  <data name="SpeakerAll" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="SpeakerMaid" xml:space="preserve">
+    <value>Maid</value>
+  </data>
+  <data name="SpeakerNarrative" xml:space="preserve">
+    <value>Narrative</value>
+  </data>
+  <data name="SpeakerNPCFemale" xml:space="preserve">
+    <value>NPC - Female</value>
+  </data>
+  <data name="SpeakerNPCMale" xml:space="preserve">
+    <value>NPC - Male</value>
+  </data>
+  <data name="SpeakerOther" xml:space="preserve">
+    <value>Specific Name</value>
+  </data>
+  <data name="SpeakerOwner" xml:space="preserve">
+    <value>Master</value>
+  </data>
+  <data name="StartPointText" xml:space="preserve">
+    <value>劇本起始點</value>
+  </data>
+  <data name="TalkStepAudioCroppingLabel" xml:space="preserve">
+    <value>Cropping</value>
+  </data>
+  <data name="TalkStepAudioEndTimeLabel" xml:space="preserve">
+    <value>Play End Time</value>
+  </data>
+  <data name="TalkStepAudioStartTimeLabel" xml:space="preserve">
+    <value>Play Start Time</value>
+  </data>
+  <data name="TalkStepAudioVolumeLabel" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="TalkStepHeader" xml:space="preserve">
+    <value>Talk</value>
+  </data>
+  <data name="TalkStepSpeakerGroupLabel" xml:space="preserve">
+    <value>Speaker Info</value>
+  </data>
+  <data name="TalkStepSpeakerListPositionLabel" xml:space="preserve">
+    <value>List Position</value>
+  </data>
+  <data name="TalkStepSpeakerNameLabel" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="TalkStepSpeakerTypeLabel" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="TalkStepTalkTextLabel" xml:space="preserve">
+    <value>Dialogue Text</value>
+  </data>
+  <data name="TalkStepUseBranchIndexLabel" xml:space="preserve">
+    <value>Use Branch Index</value>
+  </data>
+  <data name="TalkStepVoiceAllFileLabel" xml:space="preserve">
+    <value>All Voice Files</value>
+  </data>
+  <data name="TalkStepVoiceFileLabel" xml:space="preserve">
+    <value>Voice File</value>
+  </data>
+  <data name="TalkStepVoiceGroupLabel" xml:space="preserve">
+    <value>Voice</value>
+  </data>
+  <data name="TalkStepVoicePersonalityLabel" xml:space="preserve">
+    <value>Personality</value>
+  </data>
+  <data name="TargetTypeAllMaid" xml:space="preserve">
+    <value>Maid - All</value>
+  </data>
+  <data name="TargetTypeAllMan" xml:space="preserve">
+    <value>Man - All</value>
+  </data>
+  <data name="TargetTypeAllNPCFemale" xml:space="preserve">
+    <value>NPC Female - All</value>
+  </data>
+  <data name="TargetTypeAllNPCMale" xml:space="preserve">
+    <value>NPC Man - All</value>
+  </data>
+  <data name="TargetTypeGroupMember" xml:space="preserve">
+    <value>GroupMember</value>
+  </data>
+  <data name="TargetTypeMaid" xml:space="preserve">
+    <value>Maid - Single</value>
+  </data>
+  <data name="TargetTypeMan" xml:space="preserve">
+    <value>Man - Single</value>
+  </data>
+  <data name="TargetTypeNPCFemale" xml:space="preserve">
+    <value>NPC Female - Single</value>
+  </data>
+  <data name="TargetTypeNPCMale" xml:space="preserve">
+    <value>NPC Man - Single</value>
+  </data>
+  <data name="TargetTypeOwner" xml:space="preserve">
+    <value>Master</value>
+  </data>
+  <data name="TextureStepAddTextureBodyPartLabel" xml:space="preserve">
+    <value>Body Part</value>
+  </data>
+  <data name="TextureStepAddTextureLabel" xml:space="preserve">
+    <value>Add texture</value>
+  </data>
+  <data name="TextureStepAddTextureTypeLabel" xml:space="preserve">
+    <value>Texture Type</value>
+  </data>
+  <data name="TextureStepBodyPartHeader" xml:space="preserve">
+    <value>Part</value>
+  </data>
+  <data name="TextureStepGroupLabel" xml:space="preserve">
+    <value>Texture</value>
+  </data>
+  <data name="TextureStepHeader" xml:space="preserve">
+    <value>Texture</value>
+  </data>
+  <data name="TextureStepListPositionLabel" xml:space="preserve">
+    <value>List Position</value>
+  </data>
+  <data name="TextureStepRemoveTextureLabel" xml:space="preserve">
+    <value>Remove texture</value>
+  </data>
+  <data name="TextureStepTargetGroupLabel" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="TextureStepTargetTypeLabel" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="TextureStepTypeLabel" xml:space="preserve">
+    <value>Step</value>
+  </data>
+  <data name="TextureTypeSemen" xml:space="preserve">
+    <value>Semen</value>
+  </data>
+  <data name="TimeSleepStepGroupLabel" xml:space="preserve">
+    <value>Time Sleep</value>
+  </data>
+  <data name="TimeSleepStepHeader" xml:space="preserve">
+    <value>Time Sleep</value>
+  </data>
+  <data name="TimeSleepStepSleepValueLabel" xml:space="preserve">
+    <value>How many seconds to be waited in this step?</value>
+  </data>
+  <data name="TopMenuClone" xml:space="preserve">
+    <value>Clone Step</value>
+  </data>
+  <data name="TopMenuDelete" xml:space="preserve">
+    <value>Delete Step</value>
+  </data>
+  <data name="TopMenuLanguage" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="TopMenuLoad" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="TopMenuNew" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="TopMenuSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="VariableTypeBoolean" xml:space="preserve">
+    <value>Boolean</value>
+  </data>
+  <data name="VariableTypeFloatingPoint" xml:space="preserve">
+    <value>Floating Point Number</value>
+  </data>
+  <data name="VariableTypeInteger" xml:space="preserve">
+    <value>Integer</value>
+  </data>
+  <data name="VariableTypeString" xml:space="preserve">
+    <value>String</value>
+  </data>
+  <data name="WaitingTypeAuto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="WaitingTypeBranching" xml:space="preserve">
+    <value>Branching</value>
+  </data>
+  <data name="WaitingTypeCameraPan" xml:space="preserve">
+    <value>Camera Pan</value>
+  </data>
+  <data name="WaitingTypeClick" xml:space="preserve">
+    <value>User Click</value>
+  </data>
+  <data name="WaitingTypeFadeOut" xml:space="preserve">
+    <value>Fade Out</value>
+  </data>
+  <data name="WaitingTypeInputChoice" xml:space="preserve">
+    <value>User Option Select</value>
+  </data>
+  <data name="WaitingTypeTimeWait" xml:space="preserve">
+    <value>Time Wait</value>
+  </data>
+  <data name="WorldObjectStepAddObjectCountLabel" xml:space="preserve">
+    <value>No. of Objects:</value>
+  </data>
+  <data name="WorldObjectStepAddObjectsLabel" xml:space="preserve">
+    <value>Add Objects</value>
+  </data>
+  <data name="WorldObjectStepGroupLabel" xml:space="preserve">
+    <value>World Object</value>
+  </data>
+  <data name="WorldObjectStepHeader" xml:space="preserve">
+    <value>World Object</value>
+  </data>
+  <data name="WorldObjectStepRemoveObjectInstructionLabel" xml:space="preserve">
+    <value>Enter the Object IDs that have been added (one per line):</value>
+  </data>
+  <data name="WorldObjectStepRemoveObjectsLabel" xml:space="preserve">
+    <value>Remove Objects</value>
+  </data>
+  <data name="WorldObjectStepTypeLabel" xml:space="preserve">
+    <value>Type</value>
+  </data>
+</root>

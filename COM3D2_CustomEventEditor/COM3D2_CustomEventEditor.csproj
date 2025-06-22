@@ -1,0 +1,129 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <FileVersion>0.1.0</FileVersion>
+    <ApplicationIcon>Resources\favicon.ico</ApplicationIcon>
+    <Version>0.1.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Connectors\**" />
+    <Compile Remove="Shapes\**" />
+    <EmbeddedResource Remove="Connectors\**" />
+    <EmbeddedResource Remove="Shapes\**" />
+    <None Remove="Connectors\**" />
+    <None Remove="Shapes\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Remove="app.manifest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\favicon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="CustomControl\StepEdit\EvaluateInput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomControl\StepEdit\EvaluateStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomControl\StepEdit\BranchingStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="BranchingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="OptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CustomControl\ExtendedRadioButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomControl\MenuButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomControl\StepEdit\ADVEndStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomControl\StepEdit\ShowOptionStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomControl\StepEdit\TimeSleepStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomControl\StepEdit\TextureStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomControl\StepEdit\WorldObjectStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomControl\StepEdit\GroupMotionStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomControl\StepEdit\GroupManagementStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomControl\StepEdit\SEStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomControl\StepEdit\BGMStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomControl\StepEdit\FadingStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomControl\StepEdit\CameraStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomControl\StepEdit\BackgroundStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomControl\StepEdit\CharaStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomControl\StepEdit\CharaInitStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AddObjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MakeGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GroupMotionIndividualForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NPCMaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NPCFemaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="SharpZipLib" Version="1.4.2" />
+  </ItemGroup>
+
+</Project>
