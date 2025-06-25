@@ -4195,7 +4195,7 @@ namespace COM3D2_CustomEventEditor.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Step.
+        ///   Looks up a localized string similar to Type.
         /// </summary>
         internal static string TextureStepTypeLabel {
             get {

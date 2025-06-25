@@ -83,6 +83,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
         {
             if (_isInit) return;
             _StepData.Type = Constant.ADVType.FadeOut;
+            ucBasicStepInfo.WaitingType = Constant.WaitingType.FadeOut;
             FadeTypeUpdate();
         }
 
@@ -90,6 +91,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
         {
             if (_isInit) return;
             _StepData.Type = Constant.ADVType.FadeIn;
+            ucBasicStepInfo.WaitingType = Constant.WaitingType.Auto;
             FadeTypeUpdate();
         }
 

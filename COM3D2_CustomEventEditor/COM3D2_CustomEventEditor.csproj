@@ -8,7 +8,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <FileVersion>0.1.0</FileVersion>
     <ApplicationIcon>Resources\favicon.ico</ApplicationIcon>
-    <Version>0.1.0</Version>
+	<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+	<Version>0.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

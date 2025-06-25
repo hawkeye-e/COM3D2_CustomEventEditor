@@ -200,6 +200,11 @@ namespace COM3D2_CustomEventEditor
             var list = new BindingList<GroupData>(_GroupList);
 
             dgGroup.DataSource = list;
+
+            for (int i=0; i<dgGroup.RowCount; i++)
+            {
+                CheckGroupTypeChanged(i);
+            }
         }
 
 

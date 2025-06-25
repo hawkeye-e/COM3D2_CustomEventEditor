@@ -122,6 +122,11 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
         private void chkCameraPan_CheckedChanged(object sender, EventArgs e)
         {
             txtCameraPanDuration.Enabled = chkCameraPan.Checked;
+            //Update the Waiting Type too
+            if (chkCameraPan.Checked)
+                ucBasicStepInfo.WaitingType = Constant.WaitingType.CameraPan;
+            else
+                ucBasicStepInfo.WaitingType = Constant.WaitingType.Auto;
         }
 
         private void btnParser_Click(object sender, EventArgs e)

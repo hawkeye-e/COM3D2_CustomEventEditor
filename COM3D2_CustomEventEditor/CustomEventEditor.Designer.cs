@@ -40,6 +40,7 @@ namespace COM3D2_CustomEventEditor
         private void InitializeComponent()
         {
             components = new Container();
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(CustomEventEditor));
             MenuBackground = new AddStepButton();
             MenuGroupMgmt = new AddStepButton();
             MenuGroupAction = new AddStepButton();
@@ -720,6 +721,7 @@ namespace COM3D2_CustomEventEditor
             Controls.Add(DataEditingPanel);
             Controls.Add(panel2);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             KeyPreview = true;
             MaximizeBox = false;
             Name = "CustomEventEditor";

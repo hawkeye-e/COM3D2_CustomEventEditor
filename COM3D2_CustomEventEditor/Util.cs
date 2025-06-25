@@ -226,6 +226,8 @@ namespace COM3D2_CustomEventEditor
                     return Constant.WaitingType.TimeWait;
                 case StepType.ShowOption:
                     return Constant.WaitingType.InputChoice;
+                case StepType.FadeOut:
+                    return Constant.WaitingType.FadeOut;
                 default:
                     return Constant.WaitingType.Auto;
             }
