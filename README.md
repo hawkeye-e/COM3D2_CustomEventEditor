@@ -3,6 +3,9 @@
 A standalone program to create custom event files for Custom Event Loader used.<br>
 You can make your maid to tell a joke, dance or do anything you can think of in the game!
 
+You dont need to have any programming knowledge to create an event using this tool.
+As long as you know what a flow chart is and also know how to play with the studio mode in COM3D2, you can use this editor without problem.
+
 Please note that this tool is **NOT** for creating .ks file.<br>
 The result zip file created must be loaded by the Custom Event Loader mod.
 
@@ -32,8 +35,9 @@ For the mod to load custom events created in COM3D2, please refer to [Custom Eve
 15. [Time Sleep Step](https://hawkeye0.blogspot.com/2025/06/custom-event-editor-time-sleep-step.html)
 16. [Fade In/Fade Out Step](https://hawkeye0.blogspot.com/2025/06/custom-event-editor-fade-in-fade-out.html)
 17. [Evaluate Step](https://hawkeye0.blogspot.com/2025/06/custom-event-editor-evaluate-step.html)
-18. [Demo Files](https://hawkeye0.blogspot.com/2025/06/custom-event-loader-editor-demo-files.html)
+18. [Branching Step](https://hawkeye0.blogspot.com/2025/06/custom-event-editor-branching-step.html)
+19. [ADV End Step](https://hawkeye0.blogspot.com/2025/06/custom-event-editor-adv-end-step.html)
+20. [FAQ](https://hawkeye0.blogspot.com/2025/06/custom-event-editor-faq-and-tips.html)
+21. [Demo Files](https://hawkeye0.blogspot.com/2025/06/custom-event-loader-editor-demo-files.html)
 
-## Note:
-1. For detail documentation on how to use this tool, please refer to the [blog](https://hawkeye0.blogspot.com/). (TBA)
 
