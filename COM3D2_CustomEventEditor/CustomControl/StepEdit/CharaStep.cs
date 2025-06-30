@@ -225,6 +225,12 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
                     txtAnimationFile.Texts = data.MotionInfo.MotionFile;
                 }
 
+                rbCustomAnimation.Checked = !string.IsNullOrEmpty(data.MotionInfo.CustomMotionFile);
+                if (rbCustomAnimation.Checked)
+                {
+                    txtMotionCustomAnimation.Texts = data.MotionInfo.CustomMotionFile;
+                }
+
                 chkLoopMotion.Checked = data.MotionInfo.IsLoopMotion;
                 chkSmoothMotionTransition.Checked = data.MotionInfo.IsBlend;
             }
@@ -236,6 +242,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             txtScriptFile.Texts = "";
             txtScriptLabel.Texts = "";
             txtAnimationFile.Texts = "";
+            txtMotionCustomAnimation.Texts = "";
             chkLoopMotion.Checked = false;
             chkSmoothMotionTransition.Checked = false;
             rbMotionScript.Checked = true;
@@ -407,7 +414,8 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             }
             else
             {
-                //TODO: custom animation file
+                newData.MotionInfo.CustomMotionFile = txtMotionCustomAnimation.Texts;
+                newData.MotionInfo.MotionTag = txtMotionCustomAnimation.Texts.ToLower();
             }
 
             newData.MotionInfo.IsLoopMotion = chkLoopMotion.Checked;

@@ -47,9 +47,18 @@
             lblFemaleNPC = new ExtendedLabel();
             flowLayoutPanel3 = new FlowLayoutPanel();
             ucBasicStepInfo = new BasicStepInfo();
+            gbCustomData = new ExtendedGroupBox();
+            btnEditCustomClothing = new ExtendedButton();
+            lblCustomClothingCount = new ExtendedLabel();
+            lblCustomClothing = new ExtendedLabel();
+            lblCustomAnimCount = new ExtendedLabel();
+            btnEditCustomAnim = new ExtendedButton();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            lblCustomAnim = new ExtendedLabel();
             gbManSetting.SuspendLayout();
             gbNPC.SuspendLayout();
             flowLayoutPanel3.SuspendLayout();
+            gbCustomData.SuspendLayout();
             SuspendLayout();
             // 
             // lblHeader
@@ -181,7 +190,7 @@
             gbNPC.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
             gbNPC.Location = new Point(3, 399);
             gbNPC.Name = "gbNPC";
-            gbNPC.Size = new Size(267, 120);
+            gbNPC.Size = new Size(267, 82);
             gbNPC.TabIndex = 4;
             gbNPC.TabStop = false;
             gbNPC.Text = "[NPC]";
@@ -205,7 +214,7 @@
             lblMaleNPCCount.AutoSize = true;
             lblMaleNPCCount.Font = new Font("Microsoft Sans Serif", 9F);
             lblMaleNPCCount.ForeColor = SystemColors.ControlText;
-            lblMaleNPCCount.Location = new Point(150, 50);
+            lblMaleNPCCount.Location = new Point(160, 50);
             lblMaleNPCCount.Name = "lblMaleNPCCount";
             lblMaleNPCCount.Size = new Size(14, 15);
             lblMaleNPCCount.TabIndex = 34;
@@ -230,7 +239,7 @@
             lblFemaleNPCCount.AutoSize = true;
             lblFemaleNPCCount.Font = new Font("Microsoft Sans Serif", 9F);
             lblFemaleNPCCount.ForeColor = SystemColors.ControlText;
-            lblFemaleNPCCount.Location = new Point(150, 21);
+            lblFemaleNPCCount.Location = new Point(160, 21);
             lblFemaleNPCCount.Name = "lblFemaleNPCCount";
             lblFemaleNPCCount.Size = new Size(14, 15);
             lblFemaleNPCCount.TabIndex = 32;
@@ -280,10 +289,11 @@
             flowLayoutPanel3.Controls.Add(ucBasicStepInfo);
             flowLayoutPanel3.Controls.Add(gbManSetting);
             flowLayoutPanel3.Controls.Add(gbNPC);
+            flowLayoutPanel3.Controls.Add(gbCustomData);
             flowLayoutPanel3.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel3.Location = new Point(3, 46);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(284, 580);
+            flowLayoutPanel3.Size = new Size(284, 610);
             flowLayoutPanel3.TabIndex = 5;
             // 
             // ucBasicStepInfo
@@ -296,6 +306,111 @@
             ucBasicStepInfo.StepName = "";
             ucBasicStepInfo.StepNextID = "";
             ucBasicStepInfo.TabIndex = 6;
+            // 
+            // gbCustomData
+            // 
+            gbCustomData.Controls.Add(btnEditCustomClothing);
+            gbCustomData.Controls.Add(lblCustomClothingCount);
+            gbCustomData.Controls.Add(lblCustomClothing);
+            gbCustomData.Controls.Add(lblCustomAnimCount);
+            gbCustomData.Controls.Add(btnEditCustomAnim);
+            gbCustomData.Controls.Add(flowLayoutPanel1);
+            gbCustomData.Controls.Add(lblCustomAnim);
+            gbCustomData.FlatStyle = FlatStyle.Flat;
+            gbCustomData.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
+            gbCustomData.Location = new Point(3, 487);
+            gbCustomData.Name = "gbCustomData";
+            gbCustomData.Size = new Size(267, 120);
+            gbCustomData.TabIndex = 36;
+            gbCustomData.TabStop = false;
+            gbCustomData.Text = "[CustomData]";
+            gbCustomData.TextResourceKey = "CharaInitStepCustomDataGroupLabel";
+            // 
+            // btnEditCustomClothing
+            // 
+            btnEditCustomClothing.FlatStyle = FlatStyle.Flat;
+            btnEditCustomClothing.Font = new Font("Microsoft Sans Serif", 8F);
+            btnEditCustomClothing.Location = new Point(186, 47);
+            btnEditCustomClothing.Name = "btnEditCustomClothing";
+            btnEditCustomClothing.Size = new Size(75, 23);
+            btnEditCustomClothing.TabIndex = 35;
+            btnEditCustomClothing.Text = "[Edit]";
+            btnEditCustomClothing.TextResourceKey = "Edit";
+            btnEditCustomClothing.UseVisualStyleBackColor = true;
+            // 
+            // lblCustomClothingCount
+            // 
+            lblCustomClothingCount.AutoSize = true;
+            lblCustomClothingCount.Font = new Font("Microsoft Sans Serif", 9F);
+            lblCustomClothingCount.ForeColor = SystemColors.ControlText;
+            lblCustomClothingCount.Location = new Point(160, 50);
+            lblCustomClothingCount.Name = "lblCustomClothingCount";
+            lblCustomClothingCount.Size = new Size(14, 15);
+            lblCustomClothingCount.TabIndex = 34;
+            lblCustomClothingCount.Text = "0";
+            lblCustomClothingCount.TextAlign = ContentAlignment.TopRight;
+            lblCustomClothingCount.TextResourceKey = "";
+            // 
+            // lblCustomClothing
+            // 
+            lblCustomClothing.AutoSize = true;
+            lblCustomClothing.Font = new Font("Microsoft Sans Serif", 9F);
+            lblCustomClothing.ForeColor = SystemColors.ControlText;
+            lblCustomClothing.Location = new Point(6, 50);
+            lblCustomClothing.Name = "lblCustomClothing";
+            lblCustomClothing.Size = new Size(128, 15);
+            lblCustomClothing.TabIndex = 33;
+            lblCustomClothing.Text = "[NoOfCustomClothing]";
+            lblCustomClothing.TextResourceKey = "CharaInitCustomClothingCountLabel";
+            // 
+            // lblCustomAnimCount
+            // 
+            lblCustomAnimCount.AutoSize = true;
+            lblCustomAnimCount.Font = new Font("Microsoft Sans Serif", 9F);
+            lblCustomAnimCount.ForeColor = SystemColors.ControlText;
+            lblCustomAnimCount.Location = new Point(160, 21);
+            lblCustomAnimCount.Name = "lblCustomAnimCount";
+            lblCustomAnimCount.Size = new Size(14, 15);
+            lblCustomAnimCount.TabIndex = 32;
+            lblCustomAnimCount.Text = "0";
+            lblCustomAnimCount.TextAlign = ContentAlignment.TopRight;
+            lblCustomAnimCount.TextResourceKey = "";
+            // 
+            // btnEditCustomAnim
+            // 
+            btnEditCustomAnim.FlatStyle = FlatStyle.Flat;
+            btnEditCustomAnim.Font = new Font("Microsoft Sans Serif", 8F);
+            btnEditCustomAnim.Location = new Point(186, 18);
+            btnEditCustomAnim.Name = "btnEditCustomAnim";
+            btnEditCustomAnim.Size = new Size(75, 23);
+            btnEditCustomAnim.TabIndex = 30;
+            btnEditCustomAnim.Text = "[Edit]";
+            btnEditCustomAnim.TextResourceKey = "Edit";
+            btnEditCustomAnim.UseVisualStyleBackColor = true;
+            btnEditCustomAnim.Click += btnEditCustomAnim_Click;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.AutoSize = true;
+            flowLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new Point(3, 21);
+            flowLayoutPanel1.Margin = new Padding(0);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(0, 0);
+            flowLayoutPanel1.TabIndex = 4;
+            // 
+            // lblCustomAnim
+            // 
+            lblCustomAnim.AutoSize = true;
+            lblCustomAnim.Font = new Font("Microsoft Sans Serif", 9F);
+            lblCustomAnim.ForeColor = SystemColors.ControlText;
+            lblCustomAnim.Location = new Point(6, 21);
+            lblCustomAnim.Name = "lblCustomAnim";
+            lblCustomAnim.Size = new Size(111, 15);
+            lblCustomAnim.TabIndex = 31;
+            lblCustomAnim.Text = "[NoOfCustomAnim]";
+            lblCustomAnim.TextResourceKey = "CharaInitCustomAnimCountLabel";
             // 
             // CharaInitStep
             // 
@@ -313,6 +428,8 @@
             gbNPC.PerformLayout();
             flowLayoutPanel3.ResumeLayout(false);
             flowLayoutPanel3.PerformLayout();
+            gbCustomData.ResumeLayout(false);
+            gbCustomData.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -340,5 +457,13 @@
         private ExtendedLabel lblMaleNPC;
         private ExtendedLabel lblMaleNPCCount;
         private ExtendedButton btnEditNPCMale;
+        private ExtendedGroupBox gbCustomData;
+        private ExtendedButton btnEditCustomClothing;
+        private ExtendedLabel lblCustomClothingCount;
+        private ExtendedLabel lblCustomClothing;
+        private ExtendedLabel lblCustomAnimCount;
+        private ExtendedButton btnEditCustomAnim;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private ExtendedLabel lblCustomAnim;
     }
 }

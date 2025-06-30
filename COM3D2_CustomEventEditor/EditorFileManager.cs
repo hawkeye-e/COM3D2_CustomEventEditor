@@ -1,4 +1,5 @@
-﻿using ICSharpCode.SharpZipLib.Zip;
+﻿using COM3D2_CustomEventEditor.CustomControl.StepEdit;
+using ICSharpCode.SharpZipLib.Zip;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -242,18 +243,31 @@ namespace COM3D2_CustomEventEditor
             {
                 if (step.StepData.Type == Constant.ADVType.CharaInit)
                 {
-                    var customList = step.StepData.CharaInitData?.NPCFemale?.Where(x => x.Type == ADVStep.CharaInit.NPCFemaleData.NPCType.Custom).ToList();
-                    if (customList != null)
-                    {
-                        foreach (var npc in customList)
+                    if (step.StepData.CharaInitData != null) {
+                        var customNPCList = step.StepData.CharaInitData.NPCFemale?.Where(x => x.Type == ADVStep.CharaInit.NPCFemaleData.NPCType.Custom).ToList();
+                        if (customNPCList != null)
                         {
-                            if (!string.IsNullOrEmpty(npc.CustomData?.PresetFile?.V2))
-                                fileInUsed.Add(npc.CustomData?.PresetFile?.V2);
-                            if (!string.IsNullOrEmpty(npc.CustomData?.PresetFile?.V2_5))
-                                fileInUsed.Add(npc.CustomData?.PresetFile?.V2_5);
+                            //Female NPC Data
+                            foreach (var npc in customNPCList)
+                            {
+                                if (!string.IsNullOrEmpty(npc.CustomData?.PresetFile?.V2))
+                                    fileInUsed.Add(npc.CustomData?.PresetFile?.V2);
+                                if (!string.IsNullOrEmpty(npc.CustomData?.PresetFile?.V2_5))
+                                    fileInUsed.Add(npc.CustomData?.PresetFile?.V2_5);
+                            }
+                        }
+
+                        //Custom Animation
+                        if (step.StepData.CharaInitData.CustomAnim != null)
+                        {
+                            foreach (var anim in step.StepData.CharaInitData.CustomAnim)
+                            {
+                                if (!string.IsNullOrEmpty(anim.FileName))
+                                    fileInUsed.Add(anim.FileName);
+                            }
                         }
                     }
-
+                    
                 }
             }
 

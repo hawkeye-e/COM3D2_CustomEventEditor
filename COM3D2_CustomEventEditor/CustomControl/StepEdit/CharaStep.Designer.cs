@@ -84,7 +84,6 @@
             txtAnimationFile = new CustomControls.RJControls.RJTextBox();
             lblAnimationFile = new ExtendedLabel();
             pnlCustomAnimination = new Panel();
-            btnSelectCustomAnimation = new ExtendedButton();
             txtMotionCustomAnimation = new CustomControls.RJControls.RJTextBox();
             lblCustomAnimation = new ExtendedLabel();
             chkLoopMotion = new ExtendedCheckBox();
@@ -547,7 +546,7 @@
             flowLayoutPanel3.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel3.Location = new Point(3, 46);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(284, 1651);
+            flowLayoutPanel3.Size = new Size(284, 1626);
             flowLayoutPanel3.TabIndex = 5;
             // 
             // ucBasicStepInfo
@@ -674,7 +673,7 @@
             gbMotion.MinimumSize = new Size(267, 0);
             gbMotion.Name = "gbMotion";
             gbMotion.Padding = new Padding(3, 3, 3, 0);
-            gbMotion.Size = new Size(267, 442);
+            gbMotion.Size = new Size(267, 417);
             gbMotion.TabIndex = 6;
             gbMotion.TabStop = false;
             gbMotion.Text = "[Motion]";
@@ -707,7 +706,7 @@
             pnlMotionUpdate.FlowDirection = FlowDirection.TopDown;
             pnlMotionUpdate.Location = new Point(6, 46);
             pnlMotionUpdate.Name = "pnlMotionUpdate";
-            pnlMotionUpdate.Size = new Size(255, 378);
+            pnlMotionUpdate.Size = new Size(255, 353);
             pnlMotionUpdate.TabIndex = 28;
             pnlMotionUpdate.Visible = false;
             // 
@@ -774,7 +773,6 @@
             rbCustomAnimation.Text = "[CustomAnimation]";
             rbCustomAnimation.TextResourceKey = "CharaStepMotionCustomAnimationLabel";
             rbCustomAnimation.UseVisualStyleBackColor = true;
-            rbCustomAnimation.Visible = false;
             rbCustomAnimation.CheckedChanged += rbCustomAnimation_CheckedChanged;
             // 
             // pnlMotionScript
@@ -895,25 +893,12 @@
             // 
             // pnlCustomAnimination
             // 
-            pnlCustomAnimination.Controls.Add(btnSelectCustomAnimation);
             pnlCustomAnimination.Controls.Add(txtMotionCustomAnimation);
             pnlCustomAnimination.Controls.Add(lblCustomAnimation);
             pnlCustomAnimination.Location = new Point(3, 242);
             pnlCustomAnimination.Name = "pnlCustomAnimination";
-            pnlCustomAnimination.Size = new Size(249, 83);
+            pnlCustomAnimination.Size = new Size(249, 58);
             pnlCustomAnimination.TabIndex = 34;
-            // 
-            // btnSelectCustomAnimation
-            // 
-            btnSelectCustomAnimation.FlatStyle = FlatStyle.Flat;
-            btnSelectCustomAnimation.Font = new Font("Microsoft Sans Serif", 8F);
-            btnSelectCustomAnimation.Location = new Point(89, 52);
-            btnSelectCustomAnimation.Name = "btnSelectCustomAnimation";
-            btnSelectCustomAnimation.Size = new Size(75, 23);
-            btnSelectCustomAnimation.TabIndex = 28;
-            btnSelectCustomAnimation.Text = "[SelectFile]";
-            btnSelectCustomAnimation.TextResourceKey = "SelectFile";
-            btnSelectCustomAnimation.UseVisualStyleBackColor = true;
             // 
             // txtMotionCustomAnimation
             // 
@@ -930,7 +915,7 @@
             txtMotionCustomAnimation.Name = "txtMotionCustomAnimation";
             txtMotionCustomAnimation.Padding = new Padding(7);
             txtMotionCustomAnimation.PasswordChar = false;
-            txtMotionCustomAnimation.ReadOnly = true;
+            txtMotionCustomAnimation.ReadOnly = false;
             txtMotionCustomAnimation.Size = new Size(156, 31);
             txtMotionCustomAnimation.TabIndex = 27;
             txtMotionCustomAnimation.Texts = "";
@@ -950,7 +935,7 @@
             // 
             chkLoopMotion.AutoSize = true;
             chkLoopMotion.Font = new Font("Microsoft Sans Serif", 9F);
-            chkLoopMotion.Location = new Point(3, 331);
+            chkLoopMotion.Location = new Point(3, 306);
             chkLoopMotion.Name = "chkLoopMotion";
             chkLoopMotion.Size = new Size(98, 19);
             chkLoopMotion.TabIndex = 30;
@@ -962,7 +947,7 @@
             // 
             chkSmoothMotionTransition.AutoSize = true;
             chkSmoothMotionTransition.Font = new Font("Microsoft Sans Serif", 9F);
-            chkSmoothMotionTransition.Location = new Point(3, 356);
+            chkSmoothMotionTransition.Location = new Point(3, 331);
             chkSmoothMotionTransition.Name = "chkSmoothMotionTransition";
             chkSmoothMotionTransition.Size = new Size(167, 19);
             chkSmoothMotionTransition.TabIndex = 35;
@@ -978,7 +963,7 @@
             gbEyeSight.Controls.Add(pnlEyeSightUpdate);
             gbEyeSight.FlatStyle = FlatStyle.Flat;
             gbEyeSight.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
-            gbEyeSight.Location = new Point(3, 1298);
+            gbEyeSight.Location = new Point(3, 1273);
             gbEyeSight.MinimumSize = new Size(267, 0);
             gbEyeSight.Name = "gbEyeSight";
             gbEyeSight.Padding = new Padding(3, 3, 3, 0);
@@ -1359,7 +1344,6 @@
         private Panel pnlCustomAnimination;
         private CustomControls.RJControls.RJTextBox txtMotionCustomAnimation;
         private ExtendedLabel lblCustomAnimation;
-        private ExtendedButton btnSelectCustomAnimation;
         private ExtendedGroupBox gbEyeSight;
         private FlowLayoutPanel pnlEyeSightUpdate;
         private ExtendedLabel lblEyeSightType;

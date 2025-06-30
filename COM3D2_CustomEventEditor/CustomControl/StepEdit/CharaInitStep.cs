@@ -15,6 +15,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
     {
         private List<ADVStep.CharaInit.NPCFemaleData> _FemaleNPCData = new List<ADVStep.CharaInit.NPCFemaleData>();
         private List<ADVStep.CharaInit.NPCMaleData> _MaleNPCData = new List<ADVStep.CharaInit.NPCMaleData>();
+        private List<ADVStep.CharaInit.CustomAnimation> _CustomAnimData = new List<ADVStep.CharaInit.CustomAnimation>();
 
         public CharaInitStep()
         {
@@ -46,8 +47,10 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
                 _FemaleNPCData = _StepData.CharaInitData.NPCFemale;
             if (_StepData.CharaInitData.NPCMale != null)
                 _MaleNPCData = _StepData.CharaInitData.NPCMale;
+            if ( _StepData.CharaInitData.CustomAnim != null)
+                _CustomAnimData = _StepData.CharaInitData.CustomAnim;
 
-            UpdateNPCNumber();
+            UpdateCountNumber();
         }
 
 
@@ -56,6 +59,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             cbManCount.SelectedIndex = 0;
             lblFemaleNPCCount.Text = "0";
             lblMaleNPCCount.Text = "0";
+            lblCustomAnimCount.Text = "0";
 
             _StepData = stepData;
 
@@ -86,6 +90,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
 
             newData.NPCFemale = _FemaleNPCData;
             newData.NPCMale = _MaleNPCData;
+            newData.CustomAnim = _CustomAnimData;
 
             _StepData.CharaInitData = newData;
         }
@@ -106,13 +111,14 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
         {
             _FemaleNPCData = result;
             SaveData();
-            UpdateNPCNumber();
+            UpdateCountNumber();
         }
 
-        private void UpdateNPCNumber()
+        private void UpdateCountNumber()
         {
             lblFemaleNPCCount.Text = _FemaleNPCData.Count.ToString();
             lblMaleNPCCount.Text = _MaleNPCData.Count.ToString();
+            lblCustomAnimCount.Text = _CustomAnimData.Count.ToString();
         }
 
         private void btnEditNPCMale_Click(object sender, EventArgs e)
@@ -126,7 +132,21 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
         {
             _MaleNPCData = result;
             SaveData();
-            UpdateNPCNumber();
+            UpdateCountNumber();
+        }
+
+        private void btnEditCustomAnim_Click(object sender, EventArgs e)
+        {
+            CustomAnimationForm form = new CustomAnimationForm(_StepData);
+            form.OnFormCompleted += CustomAnimForm_OnFormCompleted;
+            form.ShowDialog();
+        }
+
+        private void CustomAnimForm_OnFormCompleted(List<ADVStep.CharaInit.CustomAnimation> result)
+        {
+            _CustomAnimData = result;
+            SaveData();
+            UpdateCountNumber();
         }
     }
 

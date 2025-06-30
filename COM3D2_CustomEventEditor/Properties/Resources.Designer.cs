@@ -674,6 +674,24 @@ namespace COM3D2_CustomEventEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No. of Custom Animation.
+        /// </summary>
+        internal static string CharaInitCustomAnimCountLabel {
+            get {
+                return ResourceManager.GetString("CharaInitCustomAnimCountLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No. of Custom Clothes Set.
+        /// </summary>
+        internal static string CharaInitCustomClothingCountLabel {
+            get {
+                return ResourceManager.GetString("CharaInitCustomClothingCountLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No. of female NPC:.
         /// </summary>
         internal static string CharaInitFemaleNPCCountLabel {
@@ -697,6 +715,15 @@ namespace COM3D2_CustomEventEditor.Properties {
         internal static string CharaInitManCountLabel {
             get {
                 return ResourceManager.GetString("CharaInitManCountLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Custom Data.
+        /// </summary>
+        internal static string CharaInitStepCustomDataGroupLabel {
+            get {
+                return ResourceManager.GetString("CharaInitStepCustomDataGroupLabel", resourceCulture);
             }
         }
         
@@ -1151,7 +1178,7 @@ namespace COM3D2_CustomEventEditor.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Custom Animation.
+        ///   Looks up a localized string similar to Animation Key.
         /// </summary>
         internal static string CharaStepMotionCustomAnimationFileLabel {
             get {
@@ -1381,6 +1408,42 @@ namespace COM3D2_CustomEventEditor.Properties {
             get {
                 object obj = ResourceManager.GetObject("curtain_open_black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File Name.
+        /// </summary>
+        internal static string CustomAnimFormFileName {
+            get {
+                return ResourceManager.GetString("CustomAnimFormFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update the following table for the custom animations required in this event..
+        /// </summary>
+        internal static string CustomAnimFormInstructionLabel {
+            get {
+                return ResourceManager.GetString("CustomAnimFormInstructionLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Key.
+        /// </summary>
+        internal static string CustomAnimFormKey {
+            get {
+                return ResourceManager.GetString("CustomAnimFormKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Custom Animation Settings.
+        /// </summary>
+        internal static string CustomAnimFormWindowName {
+            get {
+                return ResourceManager.GetString("CustomAnimFormWindowName", resourceCulture);
             }
         }
         

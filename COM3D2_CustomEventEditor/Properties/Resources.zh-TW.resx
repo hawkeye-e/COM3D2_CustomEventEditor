@@ -288,6 +288,12 @@
   <data name="CameraStepTargetPositionLabel" xml:space="preserve">
     <value>Target Position</value>
   </data>
+  <data name="CharaInitCustomAnimCountLabel" xml:space="preserve">
+    <value>No. of Custom Animation</value>
+  </data>
+  <data name="CharaInitCustomClothingCountLabel" xml:space="preserve">
+    <value>No. of Custom Clothes Set</value>
+  </data>
   <data name="CharaInitFemaleNPCCountLabel" xml:space="preserve">
     <value>No. of female NPC:</value>
   </data>
@@ -296,6 +302,9 @@
   </data>
   <data name="CharaInitManCountLabel" xml:space="preserve">
     <value>Number of Men</value>
+  </data>
+  <data name="CharaInitStepCustomDataGroupLabel" xml:space="preserve">
+    <value>Custom Data</value>
   </data>
   <data name="CharaInitStepHeader" xml:space="preserve">
     <value>Character Initialization</value>
@@ -448,7 +457,7 @@
     <value>Animation File</value>
   </data>
   <data name="CharaStepMotionCustomAnimationFileLabel" xml:space="preserve">
-    <value>Custom Animation</value>
+    <value>Animation Key</value>
   </data>
   <data name="CharaStepMotionCustomAnimationLabel" xml:space="preserve">
     <value>Custom Animation</value>
@@ -494,6 +503,12 @@
   </data>
   <data name="CloseAppMessage" xml:space="preserve">
     <value>You are about to close the editor. Any unsaved progress will be lost. Are you sure to close?</value>
+  </data>
+  <data name="CustomAnimFormInstructionLabel" xml:space="preserve">
+    <value>Update the following table for the custom animations required in this event.</value>
+  </data>
+  <data name="CustomAnimFormWindowName" xml:space="preserve">
+    <value>Custom Animation Settings</value>
   </data>
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
