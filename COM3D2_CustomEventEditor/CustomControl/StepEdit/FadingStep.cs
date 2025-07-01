@@ -61,7 +61,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             ADVStep.Fade newData = new ADVStep.Fade();
             newData.IsFadeOut = rbFadeOut.Checked;
             newData.IsFadeIn = rbFadeIn.Checked;
-            float.TryParse(txtFadeDuration.Texts, out newData.Time);
+            float.TryParse(txtFadeDuration.Texts, System.Globalization.CultureInfo.InvariantCulture, out newData.Time);
             newData.ColorString = txtFadeColor.Texts.Trim('#');
             
             _StepData.FadeData = newData;

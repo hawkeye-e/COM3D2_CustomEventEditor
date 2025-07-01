@@ -87,12 +87,12 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             newData.FixedPointData.PosString = txtPosString.Texts;
             newData.FixedPointData.TargetPosString = txtTargetPosition.Texts;
             newData.FixedPointData.AroundAngleString = txtAroundAngles.Texts;
-            float.TryParse(txtDistance.Texts, out newData.FixedPointData.Distance);
+            float.TryParse(txtDistance.Texts, System.Globalization.CultureInfo.InvariantCulture, out newData.FixedPointData.Distance, );
 
             if (chkCameraPan.Checked)
             {
                 newData.MoveType = ADVStep.Camera.CameraMoveType.Smooth;
-                float.TryParse(txtCameraPanDuration.Texts, out newData.AnimationTime);
+                float.TryParse(txtCameraPanDuration.Texts, System.Globalization.CultureInfo.InvariantCulture, out newData.AnimationTime);
             }
             else
                 newData.MoveType = ADVStep.Camera.CameraMoveType.Instant;
