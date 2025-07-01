@@ -1585,6 +1585,15 @@ namespace COM3D2_CustomEventEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Maximum Value (Integer).
+        /// </summary>
+        internal static string EvaluateInputMaxValueLabel {
+            get {
+                return ResourceManager.GetString("EvaluateInputMaxValueLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Character Status.
         /// </summary>
         internal static string EvaluateInputSourceTypeCharaStatusLabel {
@@ -1608,6 +1617,15 @@ namespace COM3D2_CustomEventEditor.Properties {
         internal static string EvaluateInputSourceTypeLabel {
             get {
                 return ResourceManager.GetString("EvaluateInputSourceTypeLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Random Number.
+        /// </summary>
+        internal static string EvaluateInputSourceTypeRandomNumberLabel {
+            get {
+                return ResourceManager.GetString("EvaluateInputSourceTypeRandomNumberLabel", resourceCulture);
             }
         }
         

@@ -96,6 +96,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
         {
             txtFixedValue.Texts = "";
             txtVariableName.Texts = "";
+            txtMaxValue.Texts = "";
             rbVariable.Checked = true;
             UpdatePanelVisibility();
 
@@ -134,6 +135,12 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
                     txtFixedValue.Texts = inputDetail.FixedValue.FixedValue;
                 }
             }
+            else if (inputDetail.SourceType == ADVStep.Evaluate.SourceType.RandomNumber)
+            {
+                rbRandomNumber.Checked = true;
+                if (inputDetail.RandomNumber != null)
+                    txtMaxValue.Texts = inputDetail.RandomNumber.MaxValue.ToString();
+            }
 
             //_IsInit = false;
         }
@@ -154,7 +161,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
                 result.CharaStatus = new ADVStep.Evaluate.CharaStatusInfo();
                 result.CharaStatus.ListType = cbListType.SelectedValue.ToString();
                 result.CharaStatus.ArrayPosition = cbListIndex.SelectedIndex;
-                
+
                 result.CharaStatus.FieldName = cbFieldName.SelectedValue.ToString();
             }
             else if (rbFixedValue.Checked)
@@ -163,6 +170,12 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
                 result.FixedValue = new ADVStep.Evaluate.FixedValueInfo();
                 Enum.TryParse(cbFixedValueType.SelectedValue.ToString(), out result.FixedValue.FixedValueType);
                 result.FixedValue.FixedValue = txtFixedValue.Texts;
+            }
+            else if (rbRandomNumber.Checked)
+            {
+                result.SourceType = ADVStep.Evaluate.SourceType.RandomNumber;
+                result.RandomNumber = new ADVStep.Evaluate.RandomNumberInfo();
+                int.TryParse(txtMaxValue.Texts, out result.RandomNumber.MaxValue);
             }
 
             return result;

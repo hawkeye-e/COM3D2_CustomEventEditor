@@ -549,6 +549,9 @@
   <data name="EvaluateInputListTypeLabel" xml:space="preserve">
     <value>List Type</value>
   </data>
+  <data name="EvaluateInputMaxValueLabel" xml:space="preserve">
+    <value>Maximum Value (Integer)</value>
+  </data>
   <data name="EvaluateInputSourceTypeCharaStatusLabel" xml:space="preserve">
     <value>Character Status</value>
   </data>
@@ -557,6 +560,9 @@
   </data>
   <data name="EvaluateInputSourceTypeLabel" xml:space="preserve">
     <value>Type</value>
+  </data>
+  <data name="EvaluateInputSourceTypeRandomNumberLabel" xml:space="preserve">
+    <value>Random Number</value>
   </data>
   <data name="EvaluateInputSourceTypeVariableLabel" xml:space="preserve">
     <value>Variable</value>

@@ -50,12 +50,17 @@
             rbCharaStatus = new ExtendedRadioButton();
             rbFixedValue = new ExtendedRadioButton();
             lblSourceType = new ExtendedLabel();
+            rbRandomNumber = new ExtendedRadioButton();
+            pnlRandomNumber = new Panel();
+            lblMaxValue = new ExtendedLabel();
+            txtMaxValue = new CustomControls.RJControls.RJTextBox();
             gbInput.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
             pnlVariable.SuspendLayout();
             pnlCharaStatus.SuspendLayout();
             pnlFixedValue.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
+            pnlRandomNumber.SuspendLayout();
             SuspendLayout();
             // 
             // txtVariableName
@@ -100,7 +105,7 @@
             gbInput.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             gbInput.Location = new Point(0, 3);
             gbInput.Name = "gbInput";
-            gbInput.Size = new Size(267, 434);
+            gbInput.Size = new Size(267, 504);
             gbInput.TabIndex = 11;
             gbInput.TabStop = false;
             gbInput.Text = "[Input]";
@@ -113,10 +118,11 @@
             flowLayoutPanel2.Controls.Add(pnlVariable);
             flowLayoutPanel2.Controls.Add(pnlCharaStatus);
             flowLayoutPanel2.Controls.Add(pnlFixedValue);
+            flowLayoutPanel2.Controls.Add(pnlRandomNumber);
             flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel2.Location = new Point(3, 91);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(258, 323);
+            flowLayoutPanel2.Size = new Size(258, 393);
             flowLayoutPanel2.TabIndex = 43;
             // 
             // pnlVariable
@@ -288,10 +294,11 @@
             flowLayoutPanel1.Controls.Add(rbVariable);
             flowLayoutPanel1.Controls.Add(rbCharaStatus);
             flowLayoutPanel1.Controls.Add(rbFixedValue);
+            flowLayoutPanel1.Controls.Add(rbRandomNumber);
             flowLayoutPanel1.Location = new Point(9, 35);
             flowLayoutPanel1.MaximumSize = new Size(254, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(206, 50);
+            flowLayoutPanel1.Size = new Size(228, 50);
             flowLayoutPanel1.TabIndex = 42;
             // 
             // rbVariable
@@ -346,6 +353,59 @@
             lblSourceType.Text = "[SourceType]";
             lblSourceType.TextResourceKey = "EvaluateInputSourceTypeLabel";
             // 
+            // rbRandomNumber
+            // 
+            rbRandomNumber.AutoSize = true;
+            rbRandomNumber.Font = new Font("Microsoft Sans Serif", 9F);
+            rbRandomNumber.Location = new Point(101, 28);
+            rbRandomNumber.Name = "rbRandomNumber";
+            rbRandomNumber.Size = new Size(124, 19);
+            rbRandomNumber.TabIndex = 33;
+            rbRandomNumber.Text = "[RandomNumber]";
+            rbRandomNumber.TextResourceKey = "EvaluateInputSourceTypeRandomNumberLabel";
+            rbRandomNumber.UseVisualStyleBackColor = true;
+            // 
+            // pnlRandomNumber
+            // 
+            pnlRandomNumber.Controls.Add(lblMaxValue);
+            pnlRandomNumber.Controls.Add(txtMaxValue);
+            pnlRandomNumber.Location = new Point(3, 326);
+            pnlRandomNumber.Name = "pnlRandomNumber";
+            pnlRandomNumber.Size = new Size(252, 64);
+            pnlRandomNumber.TabIndex = 7;
+            // 
+            // lblMaxValue
+            // 
+            lblMaxValue.AutoSize = true;
+            lblMaxValue.Font = new Font("Microsoft Sans Serif", 9F);
+            lblMaxValue.Location = new Point(6, 0);
+            lblMaxValue.Name = "lblMaxValue";
+            lblMaxValue.Size = new Size(92, 15);
+            lblMaxValue.TabIndex = 5;
+            lblMaxValue.Text = "[VariableName]";
+            lblMaxValue.TextResourceKey = "EvaluateInputMaxValueLabel";
+            // 
+            // txtMaxValue
+            // 
+            txtMaxValue.AutoScroll = true;
+            txtMaxValue.BackColor = SystemColors.Window;
+            txtMaxValue.BorderColor = Color.FromArgb(66, 124, 244);
+            txtMaxValue.BorderFocusColor = Color.HotPink;
+            txtMaxValue.BorderSize = 2;
+            txtMaxValue.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtMaxValue.ForeColor = Color.Black;
+            txtMaxValue.Location = new Point(6, 19);
+            txtMaxValue.Margin = new Padding(4);
+            txtMaxValue.Multiline = false;
+            txtMaxValue.Name = "txtMaxValue";
+            txtMaxValue.Padding = new Padding(7);
+            txtMaxValue.PasswordChar = false;
+            txtMaxValue.ReadOnly = false;
+            txtMaxValue.Size = new Size(230, 31);
+            txtMaxValue.TabIndex = 6;
+            txtMaxValue.Texts = "";
+            txtMaxValue.UnderlinedStyle = false;
+            // 
             // EvaluateInput
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -354,7 +414,7 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Controls.Add(gbInput);
             Name = "EvaluateInput";
-            Size = new Size(270, 440);
+            Size = new Size(270, 510);
             gbInput.ResumeLayout(false);
             gbInput.PerformLayout();
             flowLayoutPanel2.ResumeLayout(false);
@@ -366,6 +426,8 @@
             pnlFixedValue.PerformLayout();
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
+            pnlRandomNumber.ResumeLayout(false);
+            pnlRandomNumber.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -394,5 +456,9 @@
         private ExtendedLabel lblFixedValue;
         private CustomControls.RJControls.RJTextBox txtFixedValue;
         private ComboBox cbFieldName;
+        private ExtendedRadioButton rbRandomNumber;
+        private Panel pnlRandomNumber;
+        private ExtendedLabel lblMaxValue;
+        private CustomControls.RJControls.RJTextBox txtMaxValue;
     }
 }
