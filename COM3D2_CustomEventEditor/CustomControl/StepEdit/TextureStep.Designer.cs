@@ -56,6 +56,9 @@
             lblPosition = new ExtendedLabel();
             cbListIndex = new ComboBox();
             lblTarget = new ExtendedLabel();
+            pnlRemoveTexture = new Panel();
+            cbRemoveTextureType = new ComboBox();
+            lblRemoveTextureType = new ExtendedLabel();
             gbTexture.SuspendLayout();
             flowLayoutPanel4.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
@@ -65,6 +68,7 @@
             gbTarget.SuspendLayout();
             flowLayoutPanel5.SuspendLayout();
             pnlPosition.SuspendLayout();
+            pnlRemoveTexture.SuspendLayout();
             SuspendLayout();
             // 
             // lblHeader
@@ -88,7 +92,7 @@
             gbTexture.Location = new Point(3, 354);
             gbTexture.MinimumSize = new Size(267, 0);
             gbTexture.Name = "gbTexture";
-            gbTexture.Size = new Size(267, 371);
+            gbTexture.Size = new Size(267, 439);
             gbTexture.TabIndex = 3;
             gbTexture.TabStop = false;
             gbTexture.Text = "[Texture]";
@@ -101,10 +105,11 @@
             flowLayoutPanel4.Controls.Add(lblTextureType);
             flowLayoutPanel4.Controls.Add(flowLayoutPanel1);
             flowLayoutPanel4.Controls.Add(pnlAddTexture);
+            flowLayoutPanel4.Controls.Add(pnlRemoveTexture);
             flowLayoutPanel4.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel4.Location = new Point(6, 21);
             flowLayoutPanel4.Name = "flowLayoutPanel4";
-            flowLayoutPanel4.Size = new Size(253, 329);
+            flowLayoutPanel4.Size = new Size(253, 397);
             flowLayoutPanel4.TabIndex = 48;
             // 
             // lblTextureType
@@ -304,7 +309,7 @@
             flowLayoutPanel3.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel3.Location = new Point(3, 46);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(284, 735);
+            flowLayoutPanel3.Size = new Size(284, 796);
             flowLayoutPanel3.TabIndex = 5;
             // 
             // ucBasicStepInfo
@@ -405,6 +410,40 @@
             lblTarget.Text = "[Type]";
             lblTarget.TextResourceKey = "TextureStepTargetTypeLabel";
             // 
+            // pnlRemoveTexture
+            // 
+            pnlRemoveTexture.Controls.Add(cbRemoveTextureType);
+            pnlRemoveTexture.Controls.Add(lblRemoveTextureType);
+            pnlRemoveTexture.Location = new Point(3, 332);
+            pnlRemoveTexture.Name = "pnlRemoveTexture";
+            pnlRemoveTexture.Size = new Size(247, 62);
+            pnlRemoveTexture.TabIndex = 46;
+            // 
+            // cbRemoveTextureType
+            // 
+            cbRemoveTextureType.DisplayMember = "DisplayText";
+            cbRemoveTextureType.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbRemoveTextureType.FlatStyle = FlatStyle.Flat;
+            cbRemoveTextureType.Font = new Font("Microsoft Sans Serif", 9F);
+            cbRemoveTextureType.FormattingEnabled = true;
+            cbRemoveTextureType.Location = new Point(4, 29);
+            cbRemoveTextureType.Name = "cbRemoveTextureType";
+            cbRemoveTextureType.Size = new Size(111, 23);
+            cbRemoveTextureType.TabIndex = 43;
+            cbRemoveTextureType.ValueMember = "DataKey";
+            // 
+            // lblRemoveTextureType
+            // 
+            lblRemoveTextureType.AutoSize = true;
+            lblRemoveTextureType.Font = new Font("Microsoft Sans Serif", 9F);
+            lblRemoveTextureType.ForeColor = SystemColors.ControlText;
+            lblRemoveTextureType.Location = new Point(3, 11);
+            lblRemoveTextureType.Name = "lblRemoveTextureType";
+            lblRemoveTextureType.Size = new Size(80, 15);
+            lblRemoveTextureType.TabIndex = 42;
+            lblRemoveTextureType.Text = "[TextureType]";
+            lblRemoveTextureType.TextResourceKey = "TextureStepAddTextureTypeLabel";
+            // 
             // TextureStep
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -414,7 +453,7 @@
             Controls.Add(flowLayoutPanel3);
             Controls.Add(lblHeader);
             Name = "TextureStep";
-            Size = new Size(324, 784);
+            Size = new Size(324, 845);
             gbTexture.ResumeLayout(false);
             gbTexture.PerformLayout();
             flowLayoutPanel4.ResumeLayout(false);
@@ -431,6 +470,8 @@
             flowLayoutPanel5.ResumeLayout(false);
             pnlPosition.ResumeLayout(false);
             pnlPosition.PerformLayout();
+            pnlRemoveTexture.ResumeLayout(false);
+            pnlRemoveTexture.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -467,5 +508,8 @@
         private DataGridViewTextBoxColumn colPart;
         private DataGridViewButtonColumn colRemove;
         private DataGridViewTextBoxColumn colValue;
+        private Panel pnlRemoveTexture;
+        private ComboBox cbRemoveTextureType;
+        private ExtendedLabel lblRemoveTextureType;
     }
 }

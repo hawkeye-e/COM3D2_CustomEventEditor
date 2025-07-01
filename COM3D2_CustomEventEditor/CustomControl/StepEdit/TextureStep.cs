@@ -27,6 +27,9 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
         public static readonly List<ComboBoxData> TextureTypeList = new List<ComboBoxData>()
         {
             new ComboBoxData(Constant.TextureType.Semen, Util.GetResourcesString("TextureTypeSemen")),
+            new ComboBoxData(Constant.TextureType.WhipMark, Util.GetResourcesString("TextureTypeWhipMark")),
+            new ComboBoxData(Constant.TextureType.Candle, Util.GetResourcesString("TextureTypeCandle")),
+            new ComboBoxData(Constant.TextureType.SlapMark, Util.GetResourcesString("TextureTypeSlapMark")),
         };
 
         public static readonly List<ComboBoxData> SemenBodyPartTypeList = new List<ComboBoxData>()
@@ -40,7 +43,30 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             new ComboBoxData(Constant.BodyPartType.Face, Util.GetResourcesString("BodyPartTypeFace")),
         };
 
+        public static readonly List<ComboBoxData> WhipMarkBodyPartTypeList = new List<ComboBoxData>()
+        {
+            new ComboBoxData(Constant.BodyPartType.Vagina, Util.GetResourcesString("BodyPartTypeVagina")),
+            new ComboBoxData(Constant.BodyPartType.Back, Util.GetResourcesString("BodyPartTypeBack")),
+            new ComboBoxData(Constant.BodyPartType.Breast, Util.GetResourcesString("BodyPartTypeBreast")),
+            new ComboBoxData(Constant.BodyPartType.Leg, Util.GetResourcesString("BodyPartTypeLeg")),
+        };
 
+        public static readonly List<ComboBoxData> CandleBodyPartTypeList = new List<ComboBoxData>()
+        {
+            new ComboBoxData(Constant.BodyPartType.Vagina, Util.GetResourcesString("BodyPartTypeVagina")),
+            new ComboBoxData(Constant.BodyPartType.Back, Util.GetResourcesString("BodyPartTypeBack")),
+            new ComboBoxData(Constant.BodyPartType.Breast, Util.GetResourcesString("BodyPartTypeBreast")),
+            new ComboBoxData(Constant.BodyPartType.Leg, Util.GetResourcesString("BodyPartTypeLeg")),
+        };
+
+        public static readonly List<ComboBoxData> SlapMarkBodyPartTypeList = new List<ComboBoxData>()
+        {
+            new ComboBoxData(Constant.BodyPartType.Face, Util.GetResourcesString("BodyPartTypeFace")),
+            new ComboBoxData(Constant.BodyPartType.Breast, Util.GetResourcesString("BodyPartTypeBreast")),
+            new ComboBoxData(Constant.BodyPartType.Ass, Util.GetResourcesString("BodyPartTypeAss")),
+        };
+
+        
 
 
         private bool _isInit = true;
@@ -76,10 +102,14 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
                     {
                         foreach (var part in _StepData.TextureData[0].BodyTarget)
                         {
-                            SelectedBodyPart item = new SelectedBodyPart();
-                            item.value = part;
-                            item.display_text = GetBodyPartData(cbTextureType.SelectedValue.ToString(), part).DisplayText;
-                            _SelectedBodyParts.Add(item);
+                            var bodyPartData = GetBodyPartData(cbTextureType.SelectedValue.ToString(), part);
+                            if (bodyPartData != null)
+                            {
+                                SelectedBodyPart item = new SelectedBodyPart();
+                                item.value = part;
+                                item.display_text = bodyPartData.DisplayText;
+                                _SelectedBodyParts.Add(item);
+                            }
                         }
                         BindDataGrid();
                     }
@@ -95,6 +125,18 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             {
                 return SemenBodyPartTypeList.Where(x => x.DataKey == value).FirstOrDefault();
             }
+            else if (textureType == Constant.TextureType.WhipMark)
+            {
+                return WhipMarkBodyPartTypeList.Where(x => x.DataKey == value).FirstOrDefault();
+            }
+            else if (textureType == Constant.TextureType.Candle)
+            {
+                return CandleBodyPartTypeList.Where(x => x.DataKey == value).FirstOrDefault();
+            }
+            else if (textureType == Constant.TextureType.SlapMark)
+            {
+                return SlapMarkBodyPartTypeList.Where(x => x.DataKey == value).FirstOrDefault();
+            }
 
             return null;
         }
@@ -106,6 +148,9 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
 
             cbTextureType.DataSource = TextureTypeList;
             cbTextureType.SelectedIndex = 0;
+
+            cbRemoveTextureType.DataSource = TextureTypeList;
+            cbRemoveTextureType.SelectedIndex = 0;
 
             SetupListIndexDropDown();
             if (cbListIndex.Items.Count > 0)
@@ -143,22 +188,27 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             ADVStep.Texture newData = new ADVStep.Texture();
             newDataList.Add(newData);
 
-            newData.Type = cbTextureType.SelectedValue.ToString();
+            
             newData.TargetType = cbTargetType.SelectedValue.ToString();
             newData.IndexPosition = cbListIndex.SelectedIndex;
 
             if (rbAddTexture.Checked)
             {
                 //Add texture
-
+                newData.Type = cbTextureType.SelectedValue.ToString();
                 newData.BodyTarget = new List<string>();
                 foreach (var bodyPart in _SelectedBodyParts)
-                    newData.BodyTarget.Add(bodyPart.value);
+                {
+                    //add only if the body part record exists in a texture pattern
+                    var bodyPartData = GetBodyPartData(cbTextureType.SelectedValue.ToString(), bodyPart.value);
+                    if (bodyPartData != null)
+                        newData.BodyTarget.Add(bodyPart.value);
+                }
             }
             else
             {
                 //Remove texture
-                
+                newData.Type = cbRemoveTextureType.SelectedValue.ToString();
             }
 
             _StepData.TextureData = newDataList.ToArray();
@@ -181,6 +231,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
         private void UpdatePanelVisibility()
         {
             pnlAddTexture.Visible = rbAddTexture.Checked;
+            pnlRemoveTexture.Visible = rbRemoveTexture.Checked;
         }
 
         private void rbAddTexture_CheckedChanged(object sender, EventArgs e)
@@ -208,7 +259,21 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
                 cbBodyPart.DataSource = SemenBodyPartTypeList;
                 cbBodyPart.SelectedIndex = 0;
             }
-
+            else if (cbTextureType.SelectedValue.ToString() == Constant.TextureType.WhipMark)
+            {
+                cbBodyPart.DataSource = WhipMarkBodyPartTypeList;
+                cbBodyPart.SelectedIndex = 0;
+            }
+            else if (cbTextureType.SelectedValue.ToString() == Constant.TextureType.Candle)
+            {
+                cbBodyPart.DataSource = CandleBodyPartTypeList;
+                cbBodyPart.SelectedIndex = 0;
+            }
+            else if (cbTextureType.SelectedValue.ToString() == Constant.TextureType.SlapMark)
+            {
+                cbBodyPart.DataSource = SlapMarkBodyPartTypeList;
+                cbBodyPart.SelectedIndex = 0;
+            }
         }
 
         private void cbTargetType_SelectedIndexChanged(object sender, EventArgs e)

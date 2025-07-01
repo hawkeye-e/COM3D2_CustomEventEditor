@@ -373,6 +373,15 @@ namespace COM3D2_CustomEventEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Leg.
+        /// </summary>
+        internal static string BodyPartTypeLeg {
+            get {
+                return ResourceManager.GetString("BodyPartTypeLeg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mouth.
         /// </summary>
         internal static string BodyPartTypeMouth {
@@ -4285,11 +4294,38 @@ namespace COM3D2_CustomEventEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Candle.
+        /// </summary>
+        internal static string TextureTypeCandle {
+            get {
+                return ResourceManager.GetString("TextureTypeCandle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Semen.
         /// </summary>
         internal static string TextureTypeSemen {
             get {
                 return ResourceManager.GetString("TextureTypeSemen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Slap Mark.
+        /// </summary>
+        internal static string TextureTypeSlapMark {
+            get {
+                return ResourceManager.GetString("TextureTypeSlapMark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whip Mark.
+        /// </summary>
+        internal static string TextureTypeWhipMark {
+            get {
+                return ResourceManager.GetString("TextureTypeWhipMark", resourceCulture);
             }
         }
         

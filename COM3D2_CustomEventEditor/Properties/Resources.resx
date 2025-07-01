@@ -220,6 +220,9 @@
   <data name="BodyPartTypeFace" xml:space="preserve">
     <value>Face</value>
   </data>
+  <data name="BodyPartTypeLeg" xml:space="preserve">
+    <value>Leg</value>
+  </data>
   <data name="BodyPartTypeMouth" xml:space="preserve">
     <value>Mouth</value>
   </data>
@@ -1474,8 +1477,17 @@
   <data name="TextureStepTypeLabel" xml:space="preserve">
     <value>Type</value>
   </data>
+  <data name="TextureTypeCandle" xml:space="preserve">
+    <value>Candle</value>
+  </data>
   <data name="TextureTypeSemen" xml:space="preserve">
     <value>Semen</value>
+  </data>
+  <data name="TextureTypeSlapMark" xml:space="preserve">
+    <value>Slap Mark</value>
+  </data>
+  <data name="TextureTypeWhipMark" xml:space="preserve">
+    <value>Whip Mark</value>
   </data>
   <data name="texture_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\texture_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

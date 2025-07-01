@@ -201,6 +201,9 @@
   <data name="BodyPartTypeFace" xml:space="preserve">
     <value>Face</value>
   </data>
+  <data name="BodyPartTypeLeg" xml:space="preserve">
+    <value>Leg</value>
+  </data>
   <data name="BodyPartTypeMouth" xml:space="preserve">
     <value>Mouth</value>
   </data>
@@ -1290,8 +1293,14 @@
   <data name="TextureStepTypeLabel" xml:space="preserve">
     <value>Step</value>
   </data>
+  <data name="TextureTypeCandle" xml:space="preserve">
+    <value>Candle</value>
+  </data>
   <data name="TextureTypeSemen" xml:space="preserve">
     <value>Semen</value>
+  </data>
+  <data name="TextureTypeSlapMark" xml:space="preserve">
+    <value>Slap Mark</value>
   </data>
   <data name="TimeSleepStepGroupLabel" xml:space="preserve">
     <value>Time Sleep</value>
