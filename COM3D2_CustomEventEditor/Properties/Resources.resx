@@ -445,6 +445,9 @@
   <data name="CharaStepBlushingLevelLabel" xml:space="preserve">
     <value>Blushing</value>
   </data>
+  <data name="CharaStepClothesSetLabel" xml:space="preserve">
+    <value>Clothes Set</value>
+  </data>
   <data name="CharaStepCoordinatesGroupLabel" xml:space="preserve">
     <value>Coordinates</value>
   </data>
@@ -549,6 +552,90 @@
   </data>
   <data name="close_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ClothesSetFormAnkle" xml:space="preserve">
+    <value>Ankle</value>
+  </data>
+  <data name="ClothesSetFormArm" xml:space="preserve">
+    <value>Arm</value>
+  </data>
+  <data name="ClothesSetFormBack" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="ClothesSetFormBangs" xml:space="preserve">
+    <value>Bangs</value>
+  </data>
+  <data name="ClothesSetFormBellyButton" xml:space="preserve">
+    <value>Belly Button</value>
+  </data>
+  <data name="ClothesSetFormBottom" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="ClothesSetFormBra" xml:space="preserve">
+    <value>Bra</value>
+  </data>
+  <data name="ClothesSetFormChoker" xml:space="preserve">
+    <value>Choker</value>
+  </data>
+  <data name="ClothesSetFormEars" xml:space="preserve">
+    <value>Ears</value>
+  </data>
+  <data name="ClothesSetFormEyeMask" xml:space="preserve">
+    <value>Eye Mask</value>
+  </data>
+  <data name="ClothesSetFormGloves" xml:space="preserve">
+    <value>Gloves</value>
+  </data>
+  <data name="ClothesSetFormHat" xml:space="preserve">
+    <value>Hat</value>
+  </data>
+  <data name="ClothesSetFormHeadDress" xml:space="preserve">
+    <value>Head Dress</value>
+  </data>
+  <data name="ClothesSetFormKey" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="ClothesSetFormNecklace" xml:space="preserve">
+    <value>Necklace</value>
+  </data>
+  <data name="ClothesSetFormNipple" xml:space="preserve">
+    <value>Nipple</value>
+  </data>
+  <data name="ClothesSetFormNose" xml:space="preserve">
+    <value>Nose</value>
+  </data>
+  <data name="ClothesSetFormOnePiece" xml:space="preserve">
+    <value>One-Piece</value>
+  </data>
+  <data name="ClothesSetFormPanties" xml:space="preserve">
+    <value>Panties</value>
+  </data>
+  <data name="ClothesSetFormParseDataLabel" xml:space="preserve">
+    <value>Clothes Set Data to be parsed</value>
+  </data>
+  <data name="ClothesSetFormRibbon" xml:space="preserve">
+    <value>Ribbon</value>
+  </data>
+  <data name="ClothesSetFormShoes" xml:space="preserve">
+    <value>Shoes</value>
+  </data>
+  <data name="ClothesSetFormSocks" xml:space="preserve">
+    <value>Socks</value>
+  </data>
+  <data name="ClothesSetFormSwimsuit" xml:space="preserve">
+    <value>Swimsuit</value>
+  </data>
+  <data name="ClothesSetFormTail" xml:space="preserve">
+    <value>Tail</value>
+  </data>
+  <data name="ClothesSetFormTop" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="ClothesSetFormVagina" xml:space="preserve">
+    <value>Vagina</value>
+  </data>
+  <data name="ClothesSetFormWindowName" xml:space="preserve">
+    <value>Clothes Set Setting</value>
   </data>
   <data name="connector_dot" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\connector_dot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

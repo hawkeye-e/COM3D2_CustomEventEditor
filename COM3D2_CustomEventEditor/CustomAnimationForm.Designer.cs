@@ -57,10 +57,10 @@
             dgCustomAnim.SelectionMode = DataGridViewSelectionMode.CellSelect;
             dgCustomAnim.Size = new Size(615, 468);
             dgCustomAnim.TabIndex = 0;
-            dgCustomAnim.CellContentClick += dgNPC_CellContentClick;
-            dgCustomAnim.CellValueChanged += dgNPC_CellValueChanged;
-            dgCustomAnim.CurrentCellDirtyStateChanged += dgNPC_CurrentCellDirtyStateChanged;
-            dgCustomAnim.DataError += dgNPC_DataError;
+            dgCustomAnim.CellContentClick += dgCustomAnim_CellContentClick;
+            dgCustomAnim.CellValueChanged += dgCustomAnim_CellValueChanged;
+            dgCustomAnim.CurrentCellDirtyStateChanged += dgCustomAnim_CurrentCellDirtyStateChanged;
+            dgCustomAnim.DataError += dgCustomAnim_DataError;
             // 
             // btnUpdate
             // 

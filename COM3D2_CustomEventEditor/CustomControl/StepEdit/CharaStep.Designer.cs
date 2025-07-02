@@ -111,6 +111,8 @@
             flowLayoutPanel10 = new FlowLayoutPanel();
             cbEyeSightCharacterType = new ComboBox();
             lblEyeSightCharacterType = new ExtendedLabel();
+            txtClothesSet = new CustomControls.RJControls.RJTextBox();
+            lblClothesSet = new ExtendedLabel();
             gbStatus.SuspendLayout();
             flowLayoutPanel12.SuspendLayout();
             flowLayoutPanel4.SuspendLayout();
@@ -162,7 +164,7 @@
             gbStatus.MinimumSize = new Size(267, 0);
             gbStatus.Name = "gbStatus";
             gbStatus.Padding = new Padding(3, 3, 3, 0);
-            gbStatus.Size = new Size(267, 238);
+            gbStatus.Size = new Size(267, 280);
             gbStatus.TabIndex = 3;
             gbStatus.TabStop = false;
             gbStatus.Text = "[Status]";
@@ -177,7 +179,7 @@
             flowLayoutPanel12.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel12.Location = new Point(3, 21);
             flowLayoutPanel12.Name = "flowLayoutPanel12";
-            flowLayoutPanel12.Size = new Size(255, 199);
+            flowLayoutPanel12.Size = new Size(255, 241);
             flowLayoutPanel12.TabIndex = 29;
             // 
             // flowLayoutPanel4
@@ -231,6 +233,8 @@
             // 
             // pnlFemaleFaceStatus
             // 
+            pnlFemaleFaceStatus.Controls.Add(txtClothesSet);
+            pnlFemaleFaceStatus.Controls.Add(lblClothesSet);
             pnlFemaleFaceStatus.Controls.Add(lblTearLevelValue);
             pnlFemaleFaceStatus.Controls.Add(lblBlushingLevelValue);
             pnlFemaleFaceStatus.Controls.Add(tbTearLevel);
@@ -242,14 +246,14 @@
             pnlFemaleFaceStatus.Controls.Add(lblFaceAnim);
             pnlFemaleFaceStatus.Location = new Point(3, 69);
             pnlFemaleFaceStatus.Name = "pnlFemaleFaceStatus";
-            pnlFemaleFaceStatus.Size = new Size(249, 127);
+            pnlFemaleFaceStatus.Size = new Size(249, 169);
             pnlFemaleFaceStatus.TabIndex = 29;
             // 
             // lblTearLevelValue
             // 
             lblTearLevelValue.AutoSize = true;
             lblTearLevelValue.Font = new Font("Microsoft Sans Serif", 9F);
-            lblTearLevelValue.Location = new Point(202, 79);
+            lblTearLevelValue.Location = new Point(202, 120);
             lblTearLevelValue.Name = "lblTearLevelValue";
             lblTearLevelValue.Size = new Size(14, 15);
             lblTearLevelValue.TabIndex = 32;
@@ -260,7 +264,7 @@
             // 
             lblBlushingLevelValue.AutoSize = true;
             lblBlushingLevelValue.Font = new Font("Microsoft Sans Serif", 9F);
-            lblBlushingLevelValue.Location = new Point(81, 79);
+            lblBlushingLevelValue.Location = new Point(81, 120);
             lblBlushingLevelValue.Name = "lblBlushingLevelValue";
             lblBlushingLevelValue.Size = new Size(14, 15);
             lblBlushingLevelValue.TabIndex = 31;
@@ -271,7 +275,7 @@
             // 
             tbTearLevel.Enabled = false;
             tbTearLevel.LargeChange = 1;
-            tbTearLevel.Location = new Point(125, 79);
+            tbTearLevel.Location = new Point(125, 120);
             tbTearLevel.Maximum = 3;
             tbTearLevel.Name = "tbTearLevel";
             tbTearLevel.Size = new Size(82, 45);
@@ -282,7 +286,7 @@
             // 
             lblTearLevel.AutoSize = true;
             lblTearLevel.Font = new Font("Microsoft Sans Serif", 9F);
-            lblTearLevel.Location = new Point(125, 61);
+            lblTearLevel.Location = new Point(125, 102);
             lblTearLevel.Name = "lblTearLevel";
             lblTearLevel.Size = new Size(67, 15);
             lblTearLevel.TabIndex = 29;
@@ -293,7 +297,7 @@
             // 
             chkFaceBlend.AutoSize = true;
             chkFaceBlend.Font = new Font("Microsoft Sans Serif", 9F);
-            chkFaceBlend.Location = new Point(3, 42);
+            chkFaceBlend.Location = new Point(3, 83);
             chkFaceBlend.Name = "chkFaceBlend";
             chkFaceBlend.Size = new Size(195, 19);
             chkFaceBlend.TabIndex = 28;
@@ -306,7 +310,7 @@
             // 
             tbBlushing.Enabled = false;
             tbBlushing.LargeChange = 1;
-            tbBlushing.Location = new Point(3, 79);
+            tbBlushing.Location = new Point(3, 120);
             tbBlushing.Maximum = 3;
             tbBlushing.Name = "tbBlushing";
             tbBlushing.Size = new Size(82, 45);
@@ -317,7 +321,7 @@
             // 
             lblBlushingLevel.AutoSize = true;
             lblBlushingLevel.Font = new Font("Microsoft Sans Serif", 9F);
-            lblBlushingLevel.Location = new Point(2, 61);
+            lblBlushingLevel.Location = new Point(2, 102);
             lblBlushingLevel.Name = "lblBlushingLevel";
             lblBlushingLevel.Size = new Size(90, 15);
             lblBlushingLevel.TabIndex = 26;
@@ -365,7 +369,7 @@
             gbCoordinates.Controls.Add(chkCoordinateChange);
             gbCoordinates.FlatStyle = FlatStyle.Flat;
             gbCoordinates.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
-            gbCoordinates.Location = new Point(3, 619);
+            gbCoordinates.Location = new Point(3, 661);
             gbCoordinates.MinimumSize = new Size(267, 0);
             gbCoordinates.Name = "gbCoordinates";
             gbCoordinates.Size = new Size(267, 225);
@@ -546,7 +550,7 @@
             flowLayoutPanel3.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel3.Location = new Point(3, 46);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(284, 1626);
+            flowLayoutPanel3.Size = new Size(284, 1668);
             flowLayoutPanel3.TabIndex = 5;
             // 
             // ucBasicStepInfo
@@ -669,7 +673,7 @@
             gbMotion.Controls.Add(pnlMotionUpdate);
             gbMotion.FlatStyle = FlatStyle.Flat;
             gbMotion.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
-            gbMotion.Location = new Point(3, 850);
+            gbMotion.Location = new Point(3, 892);
             gbMotion.MinimumSize = new Size(267, 0);
             gbMotion.Name = "gbMotion";
             gbMotion.Padding = new Padding(3, 3, 3, 0);
@@ -963,7 +967,7 @@
             gbEyeSight.Controls.Add(pnlEyeSightUpdate);
             gbEyeSight.FlatStyle = FlatStyle.Flat;
             gbEyeSight.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
-            gbEyeSight.Location = new Point(3, 1273);
+            gbEyeSight.Location = new Point(3, 1315);
             gbEyeSight.MinimumSize = new Size(267, 0);
             gbEyeSight.Name = "gbEyeSight";
             gbEyeSight.Padding = new Padding(3, 3, 3, 0);
@@ -1237,6 +1241,38 @@
             lblEyeSightCharacterType.Text = "[Character Type]";
             lblEyeSightCharacterType.TextResourceKey = "CharaStepEyeSightCharacterTypeLabel";
             // 
+            // txtClothesSet
+            // 
+            txtClothesSet.AutoScroll = true;
+            txtClothesSet.BackColor = SystemColors.Window;
+            txtClothesSet.BorderColor = Color.FromArgb(66, 124, 244);
+            txtClothesSet.BorderFocusColor = Color.HotPink;
+            txtClothesSet.BorderSize = 2;
+            txtClothesSet.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtClothesSet.ForeColor = Color.Black;
+            txtClothesSet.Location = new Point(125, 43);
+            txtClothesSet.Margin = new Padding(4);
+            txtClothesSet.Multiline = false;
+            txtClothesSet.Name = "txtClothesSet";
+            txtClothesSet.Padding = new Padding(7);
+            txtClothesSet.PasswordChar = false;
+            txtClothesSet.ReadOnly = false;
+            txtClothesSet.Size = new Size(122, 31);
+            txtClothesSet.TabIndex = 34;
+            txtClothesSet.Texts = "";
+            txtClothesSet.UnderlinedStyle = false;
+            // 
+            // lblClothesSet
+            // 
+            lblClothesSet.AutoSize = true;
+            lblClothesSet.Font = new Font("Microsoft Sans Serif", 9F);
+            lblClothesSet.Location = new Point(2, 49);
+            lblClothesSet.Name = "lblClothesSet";
+            lblClothesSet.Size = new Size(72, 15);
+            lblClothesSet.TabIndex = 33;
+            lblClothesSet.Text = "[ClothesSet]";
+            lblClothesSet.TextResourceKey = "CharaStepClothesSetLabel";
+            // 
             // CharaStep
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1245,7 +1281,7 @@
             Controls.Add(flowLayoutPanel3);
             Controls.Add(lblHeader);
             Name = "CharaStep";
-            Size = new Size(326, 1700);
+            Size = new Size(326, 1717);
             gbStatus.ResumeLayout(false);
             gbStatus.PerformLayout();
             flowLayoutPanel12.ResumeLayout(false);
@@ -1381,5 +1417,7 @@
         private ExtendedCheckBox chkEyeSightUpdate;
         private ExtendedLabel lblGroupTarget;
         private ComboBox cbGroupTarget;
+        private CustomControls.RJControls.RJTextBox txtClothesSet;
+        private ExtendedLabel lblClothesSet;
     }
 }

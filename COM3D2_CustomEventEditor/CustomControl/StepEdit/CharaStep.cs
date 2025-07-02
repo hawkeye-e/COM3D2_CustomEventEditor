@@ -149,6 +149,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             {
                 chkOpenMouth.Checked = data.OpenMouth;
                 txtFaceAnim.Texts = data.FaceAnime;
+                txtClothesSet.Texts = data.ClothesSetID;
                 if (!string.IsNullOrEmpty(data.FaceBlend))
                 {
                     var match = Regex.Match(data.FaceBlend, Constant.FaceBlendStringFormat);
@@ -178,6 +179,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             chkFaceBlend.Checked = false;
             tbBlushing.Value = 0;
             tbTearLevel.Value = 0;
+            txtClothesSet.Texts = "";
         }
 
 
@@ -373,6 +375,8 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
                 newData.OpenMouth = chkOpenMouth.Checked;
                 if (!string.IsNullOrEmpty(txtFaceAnim.Texts))
                     newData.FaceAnime = txtFaceAnim.Texts;
+                if (!string.IsNullOrEmpty(txtClothesSet.Texts))
+                    newData.ClothesSetID = txtClothesSet.Texts;
                 if (chkFaceBlend.Checked)
                 {
                     newData.FaceBlend = Constant.BlushingWord + Util.ConvertNumberToFullTypeString(tbBlushing.Value)

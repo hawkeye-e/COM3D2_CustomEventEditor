@@ -1052,6 +1052,15 @@ namespace COM3D2_CustomEventEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clothes Set.
+        /// </summary>
+        internal static string CharaStepClothesSetLabel {
+            get {
+                return ResourceManager.GetString("CharaStepClothesSetLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Coordinates.
         /// </summary>
         internal static string CharaStepCoordinatesGroupLabel {
@@ -1367,6 +1376,258 @@ namespace COM3D2_CustomEventEditor.Properties {
         internal static string CloseAppMessage {
             get {
                 return ResourceManager.GetString("CloseAppMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ankle.
+        /// </summary>
+        internal static string ClothesSetFormAnkle {
+            get {
+                return ResourceManager.GetString("ClothesSetFormAnkle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Arm.
+        /// </summary>
+        internal static string ClothesSetFormArm {
+            get {
+                return ResourceManager.GetString("ClothesSetFormArm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Back.
+        /// </summary>
+        internal static string ClothesSetFormBack {
+            get {
+                return ResourceManager.GetString("ClothesSetFormBack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bangs.
+        /// </summary>
+        internal static string ClothesSetFormBangs {
+            get {
+                return ResourceManager.GetString("ClothesSetFormBangs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Belly Button.
+        /// </summary>
+        internal static string ClothesSetFormBellyButton {
+            get {
+                return ResourceManager.GetString("ClothesSetFormBellyButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bottom.
+        /// </summary>
+        internal static string ClothesSetFormBottom {
+            get {
+                return ResourceManager.GetString("ClothesSetFormBottom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bra.
+        /// </summary>
+        internal static string ClothesSetFormBra {
+            get {
+                return ResourceManager.GetString("ClothesSetFormBra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choker.
+        /// </summary>
+        internal static string ClothesSetFormChoker {
+            get {
+                return ResourceManager.GetString("ClothesSetFormChoker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ears.
+        /// </summary>
+        internal static string ClothesSetFormEars {
+            get {
+                return ResourceManager.GetString("ClothesSetFormEars", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eye Mask.
+        /// </summary>
+        internal static string ClothesSetFormEyeMask {
+            get {
+                return ResourceManager.GetString("ClothesSetFormEyeMask", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gloves.
+        /// </summary>
+        internal static string ClothesSetFormGloves {
+            get {
+                return ResourceManager.GetString("ClothesSetFormGloves", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hat.
+        /// </summary>
+        internal static string ClothesSetFormHat {
+            get {
+                return ResourceManager.GetString("ClothesSetFormHat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Head Dress.
+        /// </summary>
+        internal static string ClothesSetFormHeadDress {
+            get {
+                return ResourceManager.GetString("ClothesSetFormHeadDress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Key.
+        /// </summary>
+        internal static string ClothesSetFormKey {
+            get {
+                return ResourceManager.GetString("ClothesSetFormKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Necklace.
+        /// </summary>
+        internal static string ClothesSetFormNecklace {
+            get {
+                return ResourceManager.GetString("ClothesSetFormNecklace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nipple.
+        /// </summary>
+        internal static string ClothesSetFormNipple {
+            get {
+                return ResourceManager.GetString("ClothesSetFormNipple", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nose.
+        /// </summary>
+        internal static string ClothesSetFormNose {
+            get {
+                return ResourceManager.GetString("ClothesSetFormNose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One-Piece.
+        /// </summary>
+        internal static string ClothesSetFormOnePiece {
+            get {
+                return ResourceManager.GetString("ClothesSetFormOnePiece", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Panties.
+        /// </summary>
+        internal static string ClothesSetFormPanties {
+            get {
+                return ResourceManager.GetString("ClothesSetFormPanties", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clothes Set Data to be parsed.
+        /// </summary>
+        internal static string ClothesSetFormParseDataLabel {
+            get {
+                return ResourceManager.GetString("ClothesSetFormParseDataLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ribbon.
+        /// </summary>
+        internal static string ClothesSetFormRibbon {
+            get {
+                return ResourceManager.GetString("ClothesSetFormRibbon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shoes.
+        /// </summary>
+        internal static string ClothesSetFormShoes {
+            get {
+                return ResourceManager.GetString("ClothesSetFormShoes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Socks.
+        /// </summary>
+        internal static string ClothesSetFormSocks {
+            get {
+                return ResourceManager.GetString("ClothesSetFormSocks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Swimsuit.
+        /// </summary>
+        internal static string ClothesSetFormSwimsuit {
+            get {
+                return ResourceManager.GetString("ClothesSetFormSwimsuit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tail.
+        /// </summary>
+        internal static string ClothesSetFormTail {
+            get {
+                return ResourceManager.GetString("ClothesSetFormTail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Top.
+        /// </summary>
+        internal static string ClothesSetFormTop {
+            get {
+                return ResourceManager.GetString("ClothesSetFormTop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vagina.
+        /// </summary>
+        internal static string ClothesSetFormVagina {
+            get {
+                return ResourceManager.GetString("ClothesSetFormVagina", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clothes Set Setting.
+        /// </summary>
+        internal static string ClothesSetFormWindowName {
+            get {
+                return ResourceManager.GetString("ClothesSetFormWindowName", resourceCulture);
             }
         }
         

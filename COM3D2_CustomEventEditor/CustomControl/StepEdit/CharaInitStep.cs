@@ -16,6 +16,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
         private List<ADVStep.CharaInit.NPCFemaleData> _FemaleNPCData = new List<ADVStep.CharaInit.NPCFemaleData>();
         private List<ADVStep.CharaInit.NPCMaleData> _MaleNPCData = new List<ADVStep.CharaInit.NPCMaleData>();
         private List<ADVStep.CharaInit.CustomAnimation> _CustomAnimData = new List<ADVStep.CharaInit.CustomAnimation>();
+        private List<ADVStep.CharaInit.ClothesSetData> _ClothesSetData = new List<ADVStep.CharaInit.ClothesSetData>();
 
         public CharaInitStep()
         {
@@ -47,8 +48,10 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
                 _FemaleNPCData = _StepData.CharaInitData.NPCFemale;
             if (_StepData.CharaInitData.NPCMale != null)
                 _MaleNPCData = _StepData.CharaInitData.NPCMale;
-            if ( _StepData.CharaInitData.CustomAnim != null)
+            if (_StepData.CharaInitData.CustomAnim != null)
                 _CustomAnimData = _StepData.CharaInitData.CustomAnim;
+            if (_StepData.CharaInitData.ClothesSet != null)
+                _ClothesSetData = _StepData.CharaInitData.ClothesSet;
 
             UpdateCountNumber();
         }
@@ -60,6 +63,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             lblFemaleNPCCount.Text = "0";
             lblMaleNPCCount.Text = "0";
             lblCustomAnimCount.Text = "0";
+            lblCustomClothingCount.Text = "0";
 
             _StepData = stepData;
 
@@ -91,6 +95,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             newData.NPCFemale = _FemaleNPCData;
             newData.NPCMale = _MaleNPCData;
             newData.CustomAnim = _CustomAnimData;
+            newData.ClothesSet = _ClothesSetData;
 
             _StepData.CharaInitData = newData;
         }
@@ -119,6 +124,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             lblFemaleNPCCount.Text = _FemaleNPCData.Count.ToString();
             lblMaleNPCCount.Text = _MaleNPCData.Count.ToString();
             lblCustomAnimCount.Text = _CustomAnimData.Count.ToString();
+            lblCustomClothingCount.Text = _ClothesSetData.Count.ToString();
         }
 
         private void btnEditNPCMale_Click(object sender, EventArgs e)
@@ -145,6 +151,20 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
         private void CustomAnimForm_OnFormCompleted(List<ADVStep.CharaInit.CustomAnimation> result)
         {
             _CustomAnimData = result;
+            SaveData();
+            UpdateCountNumber();
+        }
+
+        private void btnEditCustomClothing_Click(object sender, EventArgs e)
+        {
+            ClothesSetForm form = new ClothesSetForm(_StepData);
+            form.OnFormCompleted += ClothesSetForm_OnFormCompleted;
+            form.ShowDialog();
+        }
+
+        private void ClothesSetForm_OnFormCompleted(List<ADVStep.CharaInit.ClothesSetData> result)
+        {
+            _ClothesSetData = result;
             SaveData();
             UpdateCountNumber();
         }

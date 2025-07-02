@@ -153,6 +153,7 @@ namespace COM3D2_CustomEventEditor
             public List<NPCFemaleData> NPCFemale;           //Female only
             public List<NPCMaleData> NPCMale;
             public List<CustomAnimation> CustomAnim;
+            public List<ClothesSetData> ClothesSet;
 
             internal class NPCFemaleData
             {
@@ -183,6 +184,12 @@ namespace COM3D2_CustomEventEditor
                 public string Key;
                 public string FileName;
             }
+
+            internal class ClothesSetData
+            {
+                public string Key;
+                public Dictionary<string, string> Slots;
+            }
         }
 
         internal class ShowChara
@@ -206,7 +213,7 @@ namespace COM3D2_CustomEventEditor
 
             public EyeSightSetting EyeSight;
             public ExtraObjectsSetting ExtraObjectsInfo;
-            public string ClothesSetID;                                 //Special ID: "RESET", reset all applied ClothesSetID. Otherwise follows ClothesSet.json
+            public string ClothesSetID;                                 //Special ID: "RESET", reset all applied ClothesSetID. 
             public EffectDetail Effect;
 
             public class SmoothMovementSetup

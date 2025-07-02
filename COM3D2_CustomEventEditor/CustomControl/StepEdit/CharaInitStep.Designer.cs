@@ -337,6 +337,7 @@
             btnEditCustomClothing.Text = "[Edit]";
             btnEditCustomClothing.TextResourceKey = "Edit";
             btnEditCustomClothing.UseVisualStyleBackColor = true;
+            btnEditCustomClothing.Click += btnEditCustomClothing_Click;
             // 
             // lblCustomClothingCount
             // 

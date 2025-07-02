@@ -30,6 +30,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="ClothesSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="CustomControl\StepEdit\EvaluateInput.cs">
       <SubType>UserControl</SubType>
     </Compile>

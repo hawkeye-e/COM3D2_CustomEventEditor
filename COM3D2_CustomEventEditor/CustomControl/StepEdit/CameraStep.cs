@@ -87,7 +87,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             newData.FixedPointData.PosString = txtPosString.Texts;
             newData.FixedPointData.TargetPosString = txtTargetPosition.Texts;
             newData.FixedPointData.AroundAngleString = txtAroundAngles.Texts;
-            float.TryParse(txtDistance.Texts, System.Globalization.CultureInfo.InvariantCulture, out newData.FixedPointData.Distance, );
+            float.TryParse(txtDistance.Texts, System.Globalization.CultureInfo.InvariantCulture, out newData.FixedPointData.Distance);
 
             if (chkCameraPan.Checked)
             {

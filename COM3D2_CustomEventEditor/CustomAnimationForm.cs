@@ -39,7 +39,7 @@ namespace COM3D2_CustomEventEditor
         internal CustomAnimationForm(ADVStep stepData)
         {
             InitializeComponent();
-            this.Load += NPCMaleForm_Load;
+            this.Load += CustomAnimationForm_Load;
 
             _CustomAnimList = ConvertStepDataToLocalList(stepData);
 
@@ -80,7 +80,7 @@ namespace COM3D2_CustomEventEditor
             return result;
         }
 
-        private void NPCMaleForm_Load(object? sender, EventArgs e)
+        private void CustomAnimationForm_Load(object? sender, EventArgs e)
         {
             Localize();
         }
@@ -128,7 +128,7 @@ namespace COM3D2_CustomEventEditor
             this.Close();
         }
 
-        private void dgNPC_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgCustomAnim_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0) // exclude header
             {
@@ -147,7 +147,11 @@ namespace COM3D2_CustomEventEditor
                 else if (e.ColumnIndex == 1)
                 {
                     //delete row
-                    dgCustomAnim.Rows.RemoveAt(e.RowIndex);
+                    try
+                    {
+                        dgCustomAnim.Rows.RemoveAt(e.RowIndex);
+                    }
+                    catch { }
                 }
             }
 
@@ -158,10 +162,10 @@ namespace COM3D2_CustomEventEditor
         public class CustomAnim
         {
             public string key { get; set; }
-            public string file_name { get; set; }            //for display purpose
+            public string file_name { get; set; }
         }
 
-        private void dgNPC_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        private void dgCustomAnim_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0)
                 return;
@@ -169,7 +173,7 @@ namespace COM3D2_CustomEventEditor
         }
 
 
-        private void dgNPC_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        private void dgCustomAnim_CurrentCellDirtyStateChanged(object sender, EventArgs e)
         {
             DataGridViewColumn col = dgCustomAnim.Columns[dgCustomAnim.CurrentCell.ColumnIndex];
             if (col is DataGridViewComboBoxColumn)
@@ -178,7 +182,7 @@ namespace COM3D2_CustomEventEditor
             }
         }
 
-        private void dgNPC_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        private void dgCustomAnim_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             dgCustomAnim.CancelEdit();
             dgCustomAnim.RefreshEdit();
