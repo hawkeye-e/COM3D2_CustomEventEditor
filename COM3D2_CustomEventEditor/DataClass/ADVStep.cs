@@ -365,8 +365,7 @@ namespace COM3D2_CustomEventEditor
 
         internal class EffectDetail
         {
-            public List<string> Add;
-            public List<string> Remove;
+            public List<string> ActiveEffects;
         }
 
         internal class Evaluate

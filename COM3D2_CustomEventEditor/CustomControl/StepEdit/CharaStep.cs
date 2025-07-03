@@ -10,11 +10,14 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static COM3D2_CustomEventEditor.ADVStep;
 
 namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
 {
     public partial class CharaStep : StepEditBase
     {
+        private List<SelectedEffect> _SelectedEffects = new List<SelectedEffect>();
+
         public static readonly List<ComboBoxData> TargetTypeList = new List<ComboBoxData>()
         {
             new ComboBoxData(Constant.TargetType.ClubOwner, Util.GetResourcesString("TargetTypeOwner")),
@@ -68,10 +71,32 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             new ComboBoxData(Enum.GetName(EyeSightSetting.GroupMemberType.Man3), Util.GetResourcesString("GroupMemberTypeMan3")),
         };
 
+        public static readonly List<ComboBoxData> EffectFemaleList = new List<ComboBoxData>()
+        {
+            new ComboBoxData(Constant.EffectType.Female.Breath, Util.GetResourcesString("EffectTypeBreath")),
+            new ComboBoxData(Constant.EffectType.Female.SexualFluid1, Util.GetResourcesString("EffectTypeSexualFluid1")),
+            new ComboBoxData(Constant.EffectType.Female.SexualFluid2, Util.GetResourcesString("EffectTypeSexualFluid2")),
+            new ComboBoxData(Constant.EffectType.Female.SexualFluid3, Util.GetResourcesString("EffectTypeSexualFluid3")),
+            new ComboBoxData(Constant.EffectType.Female.Urine_Common, Util.GetResourcesString("EffectTypeUrineCommon")),
+            new ComboBoxData(Constant.EffectType.Female.Urine_Doggy, Util.GetResourcesString("EffectTypeUrineDoggy")),
+            new ComboBoxData(Constant.EffectType.Female.Urine_Drop, Util.GetResourcesString("EffectTypeUrineDrop")),
+            new ComboBoxData(Constant.EffectType.Female.Squirting, Util.GetResourcesString("EffectTypeSquirting")),
+            new ComboBoxData(Constant.EffectType.Female.EjaculateInside, Util.GetResourcesString("EffectTypeEjaculateInside")),
+
+        };
+
+        public static readonly List<ComboBoxData> EffectMaleList = new List<ComboBoxData>()
+        {
+            new ComboBoxData(Constant.EffectType.Male.EjaculateOutside, Util.GetResourcesString("EffectTypeEjaculateOutside")),
+        };
+
 
         public CharaStep()
         {
             InitializeComponent();
+
+            colRemoveEffect.Text = Util.GetResourcesString("Delete");
+            colEffect.HeaderText = Util.GetResourcesString("CharaStepBodyEffectHeader");
         }
 
         private void InitDropDown()
@@ -90,6 +115,8 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
 
             cbGroupTarget.DataSource = GroupMemberTargetTypeList;
             cbGroupTarget.SelectedIndex = 0;
+
+            UpdateEffectTypeDropDown();
         }
 
 
@@ -108,6 +135,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             InitCoordinatesData(_StepData.CharaData[0]);
             InitMotionData(_StepData.CharaData[0]);
             InitEyeSightData(_StepData.CharaData[0]);
+            InitEffectData(_StepData.CharaData[0]);
         }
 
         private void InitTargetData(ADVStep.ShowChara data)
@@ -249,7 +277,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             chkSmoothMotionTransition.Checked = false;
             rbMotionScript.Checked = true;
         }
-        
+
 
         private void InitEyeSightData(ADVStep.ShowChara data)
         {
@@ -296,6 +324,39 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             cbGroupTarget.SelectedIndex = 0;
         }
 
+        private void InitEffectData(ADVStep.ShowChara data)
+        {
+            if (data.Effect != null)
+            {
+                chkEffectUpdate.Checked = true;
+
+                if (data.Effect.ActiveEffects != null)
+                {
+                    foreach (var effect in data.Effect.ActiveEffects)
+                    {
+                        var effectData = GetEffectData(IsCurrentTargetTypeMan, effect);
+                        if (effectData != null)
+                        {
+                            SelectedEffect item = new SelectedEffect();
+                            item.value = effect;
+                            item.display_text = effectData.DisplayText;
+                            _SelectedEffects.Add(item);
+                        }
+                    }
+                    BindEffectDataGrid();
+                }
+
+            }
+        }
+
+        private void ResetEffectData()
+        {
+            chkEffectUpdate.Checked = false;
+            _SelectedEffects = new List<SelectedEffect>();
+            UpdateEffectTypeDropDown();
+            dgEffect.Rows.Clear();
+        }
+
 
         internal void LoadData(ADVStep stepData)
         {
@@ -308,8 +369,8 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             ResetCoordinatesData();
             ResetMotionData();
             ResetEyeSightData();
+            ResetEffectData();
 
-            
             ucBasicStepInfo.LoadData(stepData);
             InitControlData();
 
@@ -319,6 +380,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             UpdateEyeSightPanelVisibility();
             UpdateEyeSightCharacterPanelVisibility();
             UpdateFaceBlendTrackerBarEnabledStatus();
+            UpdateEffectPanelVisibility();
         }
 
         public override void SaveData()
@@ -338,6 +400,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             SaveCoordinatesData(newData);
             SaveMotionData(newData);
             SaveEyeSightData(newData);
+            SaveEffectData(newData);
 
             _StepData.CharaData = newDataArray;
         }
@@ -432,7 +495,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
                 return;
 
             newData.EyeSight = new EyeSightSetting();
-            
+
             if (rbEyeSightCamera.Checked)
             {
                 newData.EyeSight.Type = EyeSightSetting.EyeSightType.ToCamera;
@@ -457,6 +520,26 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
                 {
                     newData.EyeSight.EyeToCharaSetting.ArrayPosition = cbGroupIndex.SelectedIndex;
                     Enum.TryParse(cbGroupTarget.SelectedValue.ToString(), out newData.EyeSight.EyeToCharaSetting.TargetGroupMember);
+                }
+            }
+        }
+
+        private void SaveEffectData(ADVStep.ShowChara newData)
+        {
+            if (!chkEffectUpdate.Checked)
+                return;
+
+            newData.Effect = new EffectDetail();
+            newData.Effect.ActiveEffects = new List<string>();
+
+            foreach (var effect in _SelectedEffects)
+            {
+                //add only if the body part record exists in a texture pattern
+                var effectData = GetEffectData(IsCurrentTargetTypeMan, effect.value);
+                if (effectData != null)
+                {
+                    if (!newData.Effect.ActiveEffects.Contains(effect.value))
+                        newData.Effect.ActiveEffects.Add(effect.value);
                 }
             }
         }
@@ -519,6 +602,9 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             chkOpenMouth.Visible = !IsCurrentTargetTypeMan;
             //panel visibility
             pnlFemaleFaceStatus.Visible = !IsCurrentTargetTypeMan;
+
+            //Update the effect drop down
+            UpdateEffectTypeDropDown();
         }
 
         private void chkCoordinateChange_CheckedChanged(object sender, EventArgs e)
@@ -673,6 +759,79 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             lblTearLevelValue.Text = tbTearLevel.Value.ToString();
         }
 
+        private void chkEffectUpdate_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateEffectPanelVisibility();
+        }
+
+        private void UpdateEffectPanelVisibility()
+        {
+            pnlEffect.Visible = chkEffectUpdate.Checked;
+        }
+
+        private void btnAddEffect_Click(object sender, EventArgs e)
+        {
+            SelectedEffect newItem = new SelectedEffect();
+            ComboBoxData data = (ComboBoxData)cbEffectType.SelectedItem;
+            newItem.display_text = data.DisplayText;
+            newItem.value = data.DataKey;
+            _SelectedEffects.Add(newItem);
+
+            BindEffectDataGrid();
+        }
+
+        private void BindEffectDataGrid()
+        {
+            var list = new BindingList<SelectedEffect>(_SelectedEffects);
+
+            dgEffect.DataSource = list;
+        }
+
+        private void dgEffect_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // exclude header
+            {
+                if (e.ColumnIndex == 0)
+                {
+                    //Remove button
+                    try
+                    {
+                        dgEffect.Rows.RemoveAt(e.RowIndex);
+                    }
+                    catch { }
+                }
+            }
+        }
+
+        private void UpdateEffectTypeDropDown()
+        {
+            if (IsCurrentTargetTypeMan)
+            {
+                cbEffectType.DataSource = EffectMaleList;
+                cbEffectType.SelectedIndex = 0;
+            }
+            else
+            {
+                cbEffectType.DataSource = EffectFemaleList;
+                cbEffectType.SelectedIndex = 0;
+            }
+        }
+
+        private ComboBoxData GetEffectData(bool isMan, string value)
+        {
+            if (isMan)
+            {
+                return EffectMaleList.Where(x => x.DataKey == value).FirstOrDefault();
+            }
+            else
+            {
+                return EffectFemaleList.Where(x => x.DataKey == value).FirstOrDefault();
+            }
+        }
+
+
+
+
         private bool IsCurrentTargetTypeMan
         {
             get
@@ -680,6 +839,13 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
                 return ManTargetType.Contains(cbTargetType.SelectedValue);
             }
         }
+
+        private class SelectedEffect
+        {
+            public string display_text { get; set; }
+            public string value { get; set; }
+        }
+
     }
 
 

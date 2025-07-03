@@ -254,5 +254,26 @@ namespace COM3D2_CustomEventEditor
 
             internal const string SexNumOfPeople = "sexPlayNumberOfPeople";
         }
+
+        internal static class EffectType
+        {
+            internal static class Female
+            {
+                internal const string Breath = "Breath";
+                internal const string SexualFluid1 = "SexualFluid1";
+                internal const string SexualFluid2 = "SexualFluid2";
+                internal const string SexualFluid3 = "SexualFluid3";
+                internal const string Urine_Common = "Urine_Common";
+                internal const string Urine_Doggy = "Urine_Doggy";
+                internal const string Urine_Drop = "Urine_Drop";
+                internal const string Squirting = "Squirting";
+                internal const string EjaculateInside = "Female_EjaculateInside";
+            }
+
+            internal static class Male
+            {
+                internal const string EjaculateOutside = "Male_EjaculateOutside";
+            }
+        }
     }
 }

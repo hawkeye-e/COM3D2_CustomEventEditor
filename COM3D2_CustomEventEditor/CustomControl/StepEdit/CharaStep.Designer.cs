@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             lblHeader = new ExtendedLabel();
             gbStatus = new ExtendedGroupBox();
             flowLayoutPanel12 = new FlowLayoutPanel();
@@ -36,6 +38,8 @@
             chkManNude = new ExtendedCheckBox();
             chkOpenMouth = new ExtendedCheckBox();
             pnlFemaleFaceStatus = new Panel();
+            txtClothesSet = new CustomControls.RJControls.RJTextBox();
+            lblClothesSet = new ExtendedLabel();
             lblTearLevelValue = new ExtendedLabel();
             lblBlushingLevelValue = new ExtendedLabel();
             tbTearLevel = new TrackBar();
@@ -111,8 +115,16 @@
             flowLayoutPanel10 = new FlowLayoutPanel();
             cbEyeSightCharacterType = new ComboBox();
             lblEyeSightCharacterType = new ExtendedLabel();
-            txtClothesSet = new CustomControls.RJControls.RJTextBox();
-            lblClothesSet = new ExtendedLabel();
+            gbEffect = new ExtendedGroupBox();
+            chkEffectUpdate = new ExtendedCheckBox();
+            pnlEffect = new Panel();
+            dgEffect = new DataGridView();
+            colEffect = new DataGridViewTextBoxColumn();
+            colRemoveEffect = new DataGridViewButtonColumn();
+            colValue = new DataGridViewTextBoxColumn();
+            btnAddEffect = new ExtendedButton();
+            cbEffectType = new ComboBox();
+            lblEffectType = new ExtendedLabel();
             gbStatus.SuspendLayout();
             flowLayoutPanel12.SuspendLayout();
             flowLayoutPanel4.SuspendLayout();
@@ -140,6 +152,9 @@
             flowLayoutPanel11.SuspendLayout();
             pnlEyeSightCharaPosition.SuspendLayout();
             pnlEyeSightGroupMember.SuspendLayout();
+            gbEffect.SuspendLayout();
+            pnlEffect.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgEffect).BeginInit();
             SuspendLayout();
             // 
             // lblHeader
@@ -248,6 +263,38 @@
             pnlFemaleFaceStatus.Name = "pnlFemaleFaceStatus";
             pnlFemaleFaceStatus.Size = new Size(249, 169);
             pnlFemaleFaceStatus.TabIndex = 29;
+            // 
+            // txtClothesSet
+            // 
+            txtClothesSet.AutoScroll = true;
+            txtClothesSet.BackColor = SystemColors.Window;
+            txtClothesSet.BorderColor = Color.FromArgb(66, 124, 244);
+            txtClothesSet.BorderFocusColor = Color.HotPink;
+            txtClothesSet.BorderSize = 2;
+            txtClothesSet.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtClothesSet.ForeColor = Color.Black;
+            txtClothesSet.Location = new Point(125, 43);
+            txtClothesSet.Margin = new Padding(4);
+            txtClothesSet.Multiline = false;
+            txtClothesSet.Name = "txtClothesSet";
+            txtClothesSet.Padding = new Padding(7);
+            txtClothesSet.PasswordChar = false;
+            txtClothesSet.ReadOnly = false;
+            txtClothesSet.Size = new Size(122, 31);
+            txtClothesSet.TabIndex = 34;
+            txtClothesSet.Texts = "";
+            txtClothesSet.UnderlinedStyle = false;
+            // 
+            // lblClothesSet
+            // 
+            lblClothesSet.AutoSize = true;
+            lblClothesSet.Font = new Font("Microsoft Sans Serif", 9F);
+            lblClothesSet.Location = new Point(2, 49);
+            lblClothesSet.Name = "lblClothesSet";
+            lblClothesSet.Size = new Size(72, 15);
+            lblClothesSet.TabIndex = 33;
+            lblClothesSet.Text = "[ClothesSet]";
+            lblClothesSet.TextResourceKey = "CharaStepClothesSetLabel";
             // 
             // lblTearLevelValue
             // 
@@ -547,10 +594,11 @@
             flowLayoutPanel3.Controls.Add(gbCoordinates);
             flowLayoutPanel3.Controls.Add(gbMotion);
             flowLayoutPanel3.Controls.Add(gbEyeSight);
+            flowLayoutPanel3.Controls.Add(gbEffect);
             flowLayoutPanel3.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel3.Location = new Point(3, 46);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(284, 1668);
+            flowLayoutPanel3.Size = new Size(284, 1971);
             flowLayoutPanel3.TabIndex = 5;
             // 
             // ucBasicStepInfo
@@ -1241,37 +1289,143 @@
             lblEyeSightCharacterType.Text = "[Character Type]";
             lblEyeSightCharacterType.TextResourceKey = "CharaStepEyeSightCharacterTypeLabel";
             // 
-            // txtClothesSet
+            // gbEffect
             // 
-            txtClothesSet.AutoScroll = true;
-            txtClothesSet.BackColor = SystemColors.Window;
-            txtClothesSet.BorderColor = Color.FromArgb(66, 124, 244);
-            txtClothesSet.BorderFocusColor = Color.HotPink;
-            txtClothesSet.BorderSize = 2;
-            txtClothesSet.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtClothesSet.ForeColor = Color.Black;
-            txtClothesSet.Location = new Point(125, 43);
-            txtClothesSet.Margin = new Padding(4);
-            txtClothesSet.Multiline = false;
-            txtClothesSet.Name = "txtClothesSet";
-            txtClothesSet.Padding = new Padding(7);
-            txtClothesSet.PasswordChar = false;
-            txtClothesSet.ReadOnly = false;
-            txtClothesSet.Size = new Size(122, 31);
-            txtClothesSet.TabIndex = 34;
-            txtClothesSet.Texts = "";
-            txtClothesSet.UnderlinedStyle = false;
+            gbEffect.AutoSize = true;
+            gbEffect.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            gbEffect.Controls.Add(chkEffectUpdate);
+            gbEffect.Controls.Add(pnlEffect);
+            gbEffect.FlatStyle = FlatStyle.Flat;
+            gbEffect.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
+            gbEffect.Location = new Point(3, 1671);
+            gbEffect.MinimumSize = new Size(267, 0);
+            gbEffect.Name = "gbEffect";
+            gbEffect.Size = new Size(267, 297);
+            gbEffect.TabIndex = 8;
+            gbEffect.TabStop = false;
+            gbEffect.Text = "[Effect]";
+            gbEffect.TextResourceKey = "CharaStepEffectGroupLabel";
             // 
-            // lblClothesSet
+            // chkEffectUpdate
             // 
-            lblClothesSet.AutoSize = true;
-            lblClothesSet.Font = new Font("Microsoft Sans Serif", 9F);
-            lblClothesSet.Location = new Point(2, 49);
-            lblClothesSet.Name = "lblClothesSet";
-            lblClothesSet.Size = new Size(72, 15);
-            lblClothesSet.TabIndex = 33;
-            lblClothesSet.Text = "[ClothesSet]";
-            lblClothesSet.TextResourceKey = "CharaStepClothesSetLabel";
+            chkEffectUpdate.AutoSize = true;
+            chkEffectUpdate.Font = new Font("Microsoft Sans Serif", 9F);
+            chkEffectUpdate.Location = new Point(9, 21);
+            chkEffectUpdate.Name = "chkEffectUpdate";
+            chkEffectUpdate.Size = new Size(116, 19);
+            chkEffectUpdate.TabIndex = 46;
+            chkEffectUpdate.Text = "[RequireUpdate]";
+            chkEffectUpdate.TextResourceKey = "RequireUpdate";
+            chkEffectUpdate.UseVisualStyleBackColor = true;
+            chkEffectUpdate.CheckedChanged += chkEffectUpdate_CheckedChanged;
+            // 
+            // pnlEffect
+            // 
+            pnlEffect.Controls.Add(dgEffect);
+            pnlEffect.Controls.Add(btnAddEffect);
+            pnlEffect.Controls.Add(cbEffectType);
+            pnlEffect.Controls.Add(lblEffectType);
+            pnlEffect.Location = new Point(6, 46);
+            pnlEffect.Name = "pnlEffect";
+            pnlEffect.Size = new Size(255, 230);
+            pnlEffect.TabIndex = 45;
+            // 
+            // dgEffect
+            // 
+            dgEffect.AllowUserToAddRows = false;
+            dgEffect.AllowUserToResizeColumns = false;
+            dgEffect.AllowUserToResizeRows = false;
+            dgEffect.BackgroundColor = Color.FromArgb(207, 221, 238);
+            dgEffect.BorderStyle = BorderStyle.None;
+            dgEffect.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgEffect.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgEffect.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgEffect.Columns.AddRange(new DataGridViewColumn[] { colEffect, colRemoveEffect, colValue });
+            dgEffect.GridColor = Color.FromArgb(128, 128, 255);
+            dgEffect.Location = new Point(4, 58);
+            dgEffect.MultiSelect = false;
+            dgEffect.Name = "dgEffect";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgEffect.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgEffect.RowTemplate.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgEffect.ScrollBars = ScrollBars.Vertical;
+            dgEffect.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dgEffect.Size = new Size(240, 166);
+            dgEffect.TabIndex = 46;
+            dgEffect.CellContentClick += dgEffect_CellContentClick;
+            // 
+            // colEffect
+            // 
+            colEffect.DataPropertyName = "display_text";
+            colEffect.HeaderText = "[Active Effect]";
+            colEffect.Name = "colEffect";
+            colEffect.ReadOnly = true;
+            colEffect.Width = 120;
+            // 
+            // colRemoveEffect
+            // 
+            colRemoveEffect.HeaderText = "";
+            colRemoveEffect.Name = "colRemoveEffect";
+            colRemoveEffect.UseColumnTextForButtonValue = true;
+            colRemoveEffect.Width = 60;
+            // 
+            // colValue
+            // 
+            colValue.DataPropertyName = "value";
+            colValue.HeaderText = "[value]";
+            colValue.Name = "colValue";
+            colValue.Visible = false;
+            // 
+            // btnAddEffect
+            // 
+            btnAddEffect.FlatStyle = FlatStyle.Flat;
+            btnAddEffect.Font = new Font("Microsoft Sans Serif", 8F);
+            btnAddEffect.Location = new Point(149, 29);
+            btnAddEffect.Name = "btnAddEffect";
+            btnAddEffect.Size = new Size(75, 23);
+            btnAddEffect.TabIndex = 47;
+            btnAddEffect.Text = "[Add]";
+            btnAddEffect.TextResourceKey = "Add";
+            btnAddEffect.UseVisualStyleBackColor = true;
+            btnAddEffect.Click += btnAddEffect_Click;
+            // 
+            // cbEffectType
+            // 
+            cbEffectType.DisplayMember = "DisplayText";
+            cbEffectType.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbEffectType.FlatStyle = FlatStyle.Flat;
+            cbEffectType.Font = new Font("Microsoft Sans Serif", 9F);
+            cbEffectType.FormattingEnabled = true;
+            cbEffectType.Location = new Point(4, 29);
+            cbEffectType.Name = "cbEffectType";
+            cbEffectType.Size = new Size(111, 23);
+            cbEffectType.TabIndex = 43;
+            cbEffectType.ValueMember = "DataKey";
+            // 
+            // lblEffectType
+            // 
+            lblEffectType.AutoSize = true;
+            lblEffectType.Font = new Font("Microsoft Sans Serif", 9F);
+            lblEffectType.ForeColor = SystemColors.ControlText;
+            lblEffectType.Location = new Point(3, 11);
+            lblEffectType.Name = "lblEffectType";
+            lblEffectType.Size = new Size(69, 15);
+            lblEffectType.TabIndex = 42;
+            lblEffectType.Text = "[EffectType]";
+            lblEffectType.TextResourceKey = "CharaStepEffectTypeLabel";
             // 
             // CharaStep
             // 
@@ -1281,7 +1435,7 @@
             Controls.Add(flowLayoutPanel3);
             Controls.Add(lblHeader);
             Name = "CharaStep";
-            Size = new Size(326, 1717);
+            Size = new Size(326, 2020);
             gbStatus.ResumeLayout(false);
             gbStatus.PerformLayout();
             flowLayoutPanel12.ResumeLayout(false);
@@ -1328,6 +1482,11 @@
             pnlEyeSightCharaPosition.PerformLayout();
             pnlEyeSightGroupMember.ResumeLayout(false);
             pnlEyeSightGroupMember.PerformLayout();
+            gbEffect.ResumeLayout(false);
+            gbEffect.PerformLayout();
+            pnlEffect.ResumeLayout(false);
+            pnlEffect.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgEffect).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1419,5 +1578,15 @@
         private ComboBox cbGroupTarget;
         private CustomControls.RJControls.RJTextBox txtClothesSet;
         private ExtendedLabel lblClothesSet;
+        private ExtendedGroupBox gbEffect;
+        private Panel pnlEffect;
+        private DataGridView dgEffect;
+        private ExtendedButton btnAddEffect;
+        private ComboBox cbEffectType;
+        private ExtendedLabel lblEffectType;
+        private ExtendedCheckBox chkEffectUpdate;
+        private DataGridViewTextBoxColumn colEffect;
+        private DataGridViewButtonColumn colRemoveEffect;
+        private DataGridViewTextBoxColumn colValue;
     }
 }

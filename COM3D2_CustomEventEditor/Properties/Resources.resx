@@ -445,11 +445,20 @@
   <data name="CharaStepBlushingLevelLabel" xml:space="preserve">
     <value>Blushing</value>
   </data>
+  <data name="CharaStepBodyEffectHeader" xml:space="preserve">
+    <value>Active Effect</value>
+  </data>
   <data name="CharaStepClothesSetLabel" xml:space="preserve">
     <value>Clothes Set</value>
   </data>
   <data name="CharaStepCoordinatesGroupLabel" xml:space="preserve">
     <value>Coordinates</value>
+  </data>
+  <data name="CharaStepEffectGroupLabel" xml:space="preserve">
+    <value>Effect</value>
+  </data>
+  <data name="CharaStepEffectTypeLabel" xml:space="preserve">
+    <value>Select the list of effects applied to the character</value>
   </data>
   <data name="CharaStepEyeSightCameraLabel" xml:space="preserve">
     <value>Camera</value>
@@ -669,6 +678,36 @@
   </data>
   <data name="Edit" xml:space="preserve">
     <value>Edit</value>
+  </data>
+  <data name="EffectTypeBreath" xml:space="preserve">
+    <value>Breath</value>
+  </data>
+  <data name="EffectTypeEjaculateInside" xml:space="preserve">
+    <value>Ejaculate Inside</value>
+  </data>
+  <data name="EffectTypeEjaculateOutside" xml:space="preserve">
+    <value>Ejaculate Outside</value>
+  </data>
+  <data name="EffectTypeSexualFluid1" xml:space="preserve">
+    <value>Sexual Fluid (Type 1)</value>
+  </data>
+  <data name="EffectTypeSexualFluid2" xml:space="preserve">
+    <value>Sexual Fluid (Type 2)</value>
+  </data>
+  <data name="EffectTypeSexualFluid3" xml:space="preserve">
+    <value>Sexual Fluid (Type 3)</value>
+  </data>
+  <data name="EffectTypeSquirting" xml:space="preserve">
+    <value>Squirting</value>
+  </data>
+  <data name="EffectTypeUrineCommon" xml:space="preserve">
+    <value>Urinate (Standard)</value>
+  </data>
+  <data name="EffectTypeUrineDoggy" xml:space="preserve">
+    <value>Urinate (Doggy)</value>
+  </data>
+  <data name="EffectTypeUrineDrop" xml:space="preserve">
+    <value>Urine dripping</value>
   </data>
   <data name="EndPointText" xml:space="preserve">
     <value>ADV End</value>

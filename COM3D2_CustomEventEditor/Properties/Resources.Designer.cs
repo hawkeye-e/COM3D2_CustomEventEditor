@@ -1052,6 +1052,15 @@ namespace COM3D2_CustomEventEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Active Effect.
+        /// </summary>
+        internal static string CharaStepBodyEffectHeader {
+            get {
+                return ResourceManager.GetString("CharaStepBodyEffectHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Clothes Set.
         /// </summary>
         internal static string CharaStepClothesSetLabel {
@@ -1066,6 +1075,24 @@ namespace COM3D2_CustomEventEditor.Properties {
         internal static string CharaStepCoordinatesGroupLabel {
             get {
                 return ResourceManager.GetString("CharaStepCoordinatesGroupLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Effect.
+        /// </summary>
+        internal static string CharaStepEffectGroupLabel {
+            get {
+                return ResourceManager.GetString("CharaStepEffectGroupLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the list of effects applied to the character.
+        /// </summary>
+        internal static string CharaStepEffectTypeLabel {
+            get {
+                return ResourceManager.GetString("CharaStepEffectTypeLabel", resourceCulture);
             }
         }
         
@@ -1732,6 +1759,96 @@ namespace COM3D2_CustomEventEditor.Properties {
         internal static string Edit {
             get {
                 return ResourceManager.GetString("Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Breath.
+        /// </summary>
+        internal static string EffectTypeBreath {
+            get {
+                return ResourceManager.GetString("EffectTypeBreath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ejaculate Inside.
+        /// </summary>
+        internal static string EffectTypeEjaculateInside {
+            get {
+                return ResourceManager.GetString("EffectTypeEjaculateInside", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ejaculate Outside.
+        /// </summary>
+        internal static string EffectTypeEjaculateOutside {
+            get {
+                return ResourceManager.GetString("EffectTypeEjaculateOutside", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sexual Fluid (Type 1).
+        /// </summary>
+        internal static string EffectTypeSexualFluid1 {
+            get {
+                return ResourceManager.GetString("EffectTypeSexualFluid1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sexual Fluid (Type 2).
+        /// </summary>
+        internal static string EffectTypeSexualFluid2 {
+            get {
+                return ResourceManager.GetString("EffectTypeSexualFluid2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sexual Fluid (Type 3).
+        /// </summary>
+        internal static string EffectTypeSexualFluid3 {
+            get {
+                return ResourceManager.GetString("EffectTypeSexualFluid3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Squirting.
+        /// </summary>
+        internal static string EffectTypeSquirting {
+            get {
+                return ResourceManager.GetString("EffectTypeSquirting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Urinate (Standard).
+        /// </summary>
+        internal static string EffectTypeUrineCommon {
+            get {
+                return ResourceManager.GetString("EffectTypeUrineCommon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Urinate (Doggy).
+        /// </summary>
+        internal static string EffectTypeUrineDoggy {
+            get {
+                return ResourceManager.GetString("EffectTypeUrineDoggy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Urine dripping.
+        /// </summary>
+        internal static string EffectTypeUrineDrop {
+            get {
+                return ResourceManager.GetString("EffectTypeUrineDrop", resourceCulture);
             }
         }
         
