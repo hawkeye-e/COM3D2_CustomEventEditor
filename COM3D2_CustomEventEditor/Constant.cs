@@ -179,6 +179,7 @@ namespace COM3D2_CustomEventEditor
             internal const string Candle = "Candle";
             internal const string WhipMark = "WhipMark";
             internal const string SlapMark = "SlapMark";
+            internal const string Lotion = "Lotion";
         }
 
         internal static class BodyPartType
@@ -191,6 +192,7 @@ namespace COM3D2_CustomEventEditor
             internal const string Mouth = "Mouth";
             internal const string Face = "Face";
             internal const string Leg = "Leg";
+            internal const string FullBody = "FullBody";
         }
 
         internal static class OperatorType

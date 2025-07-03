@@ -30,6 +30,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             new ComboBoxData(Constant.TextureType.WhipMark, Util.GetResourcesString("TextureTypeWhipMark")),
             new ComboBoxData(Constant.TextureType.Candle, Util.GetResourcesString("TextureTypeCandle")),
             new ComboBoxData(Constant.TextureType.SlapMark, Util.GetResourcesString("TextureTypeSlapMark")),
+            new ComboBoxData(Constant.TextureType.Lotion, Util.GetResourcesString("TextureTypeLotion")),
         };
 
         public static readonly List<ComboBoxData> SemenBodyPartTypeList = new List<ComboBoxData>()
@@ -66,7 +67,11 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             new ComboBoxData(Constant.BodyPartType.Ass, Util.GetResourcesString("BodyPartTypeAss")),
         };
 
-        
+        public static readonly List<ComboBoxData> LotionBodyPartTypeList = new List<ComboBoxData>()
+        {
+            new ComboBoxData(Constant.BodyPartType.FullBody, Util.GetResourcesString("BodyPartTypeFullBody")),    
+        };
+
 
 
         private bool _isInit = true;
@@ -137,6 +142,11 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             {
                 return SlapMarkBodyPartTypeList.Where(x => x.DataKey == value).FirstOrDefault();
             }
+            else if (textureType == Constant.TextureType.Lotion)
+            {
+                return LotionBodyPartTypeList.Where(x => x.DataKey == value).FirstOrDefault();
+            }
+            else
 
             return null;
         }
@@ -272,6 +282,11 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             else if (cbTextureType.SelectedValue.ToString() == Constant.TextureType.SlapMark)
             {
                 cbBodyPart.DataSource = SlapMarkBodyPartTypeList;
+                cbBodyPart.SelectedIndex = 0;
+            }
+            else if (cbTextureType.SelectedValue.ToString() == Constant.TextureType.Lotion)
+            {
+                cbBodyPart.DataSource = LotionBodyPartTypeList;
                 cbBodyPart.SelectedIndex = 0;
             }
         }

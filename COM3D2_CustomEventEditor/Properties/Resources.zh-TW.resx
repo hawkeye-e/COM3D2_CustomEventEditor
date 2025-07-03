@@ -201,6 +201,9 @@
   <data name="BodyPartTypeFace" xml:space="preserve">
     <value>Face</value>
   </data>
+  <data name="BodyPartTypeFullBody" xml:space="preserve">
+    <value>Full Body</value>
+  </data>
   <data name="BodyPartTypeLeg" xml:space="preserve">
     <value>Leg</value>
   </data>
@@ -1421,6 +1424,9 @@
   </data>
   <data name="TextureTypeCandle" xml:space="preserve">
     <value>Candle</value>
+  </data>
+  <data name="TextureTypeLotion" xml:space="preserve">
+    <value>Lotion</value>
   </data>
   <data name="TextureTypeSemen" xml:space="preserve">
     <value>Semen</value>

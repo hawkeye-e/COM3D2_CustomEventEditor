@@ -373,6 +373,15 @@ namespace COM3D2_CustomEventEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Full Body.
+        /// </summary>
+        internal static string BodyPartTypeFullBody {
+            get {
+                return ResourceManager.GetString("BodyPartTypeFullBody", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Leg.
         /// </summary>
         internal static string BodyPartTypeLeg {
@@ -4677,6 +4686,15 @@ namespace COM3D2_CustomEventEditor.Properties {
         internal static string TextureTypeCandle {
             get {
                 return ResourceManager.GetString("TextureTypeCandle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lotion.
+        /// </summary>
+        internal static string TextureTypeLotion {
+            get {
+                return ResourceManager.GetString("TextureTypeLotion", resourceCulture);
             }
         }
         
