@@ -212,7 +212,7 @@ namespace COM3D2_CustomEventEditor
             public PosRot PosRot;
 
             public EyeSightSetting EyeSight;
-            public ExtraObjectsSetting ExtraObjectsInfo;
+            public ExtraItemObject ExtraObjectInfo;
             public string ClothesSetID;                                 //Special ID: "RESET", reset all applied ClothesSetID. 
             public EffectDetail Effect;
 
@@ -344,12 +344,6 @@ namespace COM3D2_CustomEventEditor
                 public int SrcPosition;
                 public int PositionToInsert;
             }
-        }
-
-        internal class ExtraObjectsSetting
-        {
-            public List<ExtraItemObject> AddObjects;
-            public List<string> RemoveObjects;     //For remove, only need to provide the Target
         }
 
         internal class WorldObject

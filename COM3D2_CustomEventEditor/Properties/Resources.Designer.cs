@@ -1106,6 +1106,15 @@ namespace COM3D2_CustomEventEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Extra Item.
+        /// </summary>
+        internal static string CharaStepExtraItemGroupLabel {
+            get {
+                return ResourceManager.GetString("CharaStepExtraItemGroupLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Camera.
         /// </summary>
         internal static string CharaStepEyeSightCameraLabel {
@@ -1201,6 +1210,24 @@ namespace COM3D2_CustomEventEditor.Properties {
         internal static string CharaStepHeader {
             get {
                 return ResourceManager.GetString("CharaStepHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File Name.
+        /// </summary>
+        internal static string CharaStepItemFileNameLabel {
+            get {
+                return ResourceManager.GetString("CharaStepItemFileNameLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Target.
+        /// </summary>
+        internal static string CharaStepItemTargetLabel {
+            get {
+                return ResourceManager.GetString("CharaStepItemTargetLabel", resourceCulture);
             }
         }
         

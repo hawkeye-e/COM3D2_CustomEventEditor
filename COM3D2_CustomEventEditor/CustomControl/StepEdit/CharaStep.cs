@@ -136,6 +136,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             InitMotionData(_StepData.CharaData[0]);
             InitEyeSightData(_StepData.CharaData[0]);
             InitEffectData(_StepData.CharaData[0]);
+            InitExtraItemData(_StepData.CharaData[0]);
         }
 
         private void InitTargetData(ADVStep.ShowChara data)
@@ -357,6 +358,23 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             dgEffect.Rows.Clear();
         }
 
+        private void InitExtraItemData(ADVStep.ShowChara data)
+        {
+            if (data.ExtraObjectInfo != null)
+            {
+                chkExtraItemUpdate.Checked = true;
+                txtItemTarget.Texts = data.ExtraObjectInfo.Target;
+                txtItemFileName.Texts = data.ExtraObjectInfo.ItemFile;
+            }
+        }
+
+        private void ResetExtraItemData()
+        {
+            chkExtraItemUpdate.Checked = false;
+            txtItemTarget.Texts = "";
+            txtItemFileName.Texts = "";
+        }
+
 
         internal void LoadData(ADVStep stepData)
         {
@@ -370,6 +388,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             ResetMotionData();
             ResetEyeSightData();
             ResetEffectData();
+            ResetExtraItemData();
 
             ucBasicStepInfo.LoadData(stepData);
             InitControlData();
@@ -381,6 +400,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             UpdateEyeSightCharacterPanelVisibility();
             UpdateFaceBlendTrackerBarEnabledStatus();
             UpdateEffectPanelVisibility();
+            UpdateExtraItemPanelVisibility();
         }
 
         public override void SaveData()
@@ -401,6 +421,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             SaveMotionData(newData);
             SaveEyeSightData(newData);
             SaveEffectData(newData);
+            SaveExtraItemData(newData);
 
             _StepData.CharaData = newDataArray;
         }
@@ -542,6 +563,16 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
                         newData.Effect.ActiveEffects.Add(effect.value);
                 }
             }
+        }
+
+        private void SaveExtraItemData(ADVStep.ShowChara newData)
+        {
+            if (!chkExtraItemUpdate.Checked)
+                return;
+
+            newData.ExtraObjectInfo = new ExtraItemObject();
+            newData.ExtraObjectInfo.Target = txtItemTarget.Texts;
+            newData.ExtraObjectInfo.ItemFile = txtItemFileName.Texts;
         }
 
         public override void ReloadData()
@@ -827,6 +858,16 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             {
                 return EffectFemaleList.Where(x => x.DataKey == value).FirstOrDefault();
             }
+        }
+
+        private void chkExtraItemUpdate_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateExtraItemPanelVisibility();
+        }
+
+        private void UpdateExtraItemPanelVisibility()
+        {
+            pnlExtraItem.Visible = chkExtraItemUpdate.Checked;
         }
 
 

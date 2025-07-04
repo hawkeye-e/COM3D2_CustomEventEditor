@@ -463,6 +463,9 @@
   <data name="CharaStepEffectTypeLabel" xml:space="preserve">
     <value>Select the list of effects applied to the character</value>
   </data>
+  <data name="CharaStepExtraItemGroupLabel" xml:space="preserve">
+    <value>Extra Item</value>
+  </data>
   <data name="CharaStepEyeSightCameraLabel" xml:space="preserve">
     <value>Camera</value>
   </data>
@@ -495,6 +498,12 @@
   </data>
   <data name="CharaStepHeader" xml:space="preserve">
     <value>Character</value>
+  </data>
+  <data name="CharaStepItemFileNameLabel" xml:space="preserve">
+    <value>File Name</value>
+  </data>
+  <data name="CharaStepItemTargetLabel" xml:space="preserve">
+    <value>Target</value>
   </data>
   <data name="CharaStepManNudeLabel" xml:space="preserve">
     <value>Nude</value>

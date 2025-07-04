@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             lblHeader = new ExtendedLabel();
             gbStatus = new ExtendedGroupBox();
             flowLayoutPanel12 = new FlowLayoutPanel();
@@ -115,6 +115,15 @@
             flowLayoutPanel10 = new FlowLayoutPanel();
             cbEyeSightCharacterType = new ComboBox();
             lblEyeSightCharacterType = new ExtendedLabel();
+            gbExtraItem = new ExtendedGroupBox();
+            flowLayoutPanel6 = new FlowLayoutPanel();
+            pnlExtraItem = new Panel();
+            txtItemFileName = new CustomControls.RJControls.RJTextBox();
+            lblItemFileName = new ExtendedLabel();
+            txtItemTarget = new CustomControls.RJControls.RJTextBox();
+            lblItemTarget = new ExtendedLabel();
+            flowLayoutPanel8 = new FlowLayoutPanel();
+            chkExtraItemUpdate = new ExtendedCheckBox();
             gbEffect = new ExtendedGroupBox();
             chkEffectUpdate = new ExtendedCheckBox();
             pnlEffect = new Panel();
@@ -152,6 +161,9 @@
             flowLayoutPanel11.SuspendLayout();
             pnlEyeSightCharaPosition.SuspendLayout();
             pnlEyeSightGroupMember.SuspendLayout();
+            gbExtraItem.SuspendLayout();
+            flowLayoutPanel6.SuspendLayout();
+            pnlExtraItem.SuspendLayout();
             gbEffect.SuspendLayout();
             pnlEffect.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgEffect).BeginInit();
@@ -594,11 +606,12 @@
             flowLayoutPanel3.Controls.Add(gbCoordinates);
             flowLayoutPanel3.Controls.Add(gbMotion);
             flowLayoutPanel3.Controls.Add(gbEyeSight);
+            flowLayoutPanel3.Controls.Add(gbExtraItem);
             flowLayoutPanel3.Controls.Add(gbEffect);
             flowLayoutPanel3.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel3.Location = new Point(3, 46);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(284, 1971);
+            flowLayoutPanel3.Size = new Size(284, 2136);
             flowLayoutPanel3.TabIndex = 5;
             // 
             // ucBasicStepInfo
@@ -1289,6 +1302,134 @@
             lblEyeSightCharacterType.Text = "[Character Type]";
             lblEyeSightCharacterType.TextResourceKey = "CharaStepEyeSightCharacterTypeLabel";
             // 
+            // gbExtraItem
+            // 
+            gbExtraItem.AutoSize = true;
+            gbExtraItem.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            gbExtraItem.Controls.Add(flowLayoutPanel6);
+            gbExtraItem.Controls.Add(flowLayoutPanel8);
+            gbExtraItem.Controls.Add(chkExtraItemUpdate);
+            gbExtraItem.FlatStyle = FlatStyle.Flat;
+            gbExtraItem.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
+            gbExtraItem.Location = new Point(3, 1671);
+            gbExtraItem.MinimumSize = new Size(267, 0);
+            gbExtraItem.Name = "gbExtraItem";
+            gbExtraItem.Size = new Size(267, 159);
+            gbExtraItem.TabIndex = 9;
+            gbExtraItem.TabStop = false;
+            gbExtraItem.Text = "[Extra Item]";
+            gbExtraItem.TextResourceKey = "CharaStepExtraItemGroupLabel";
+            // 
+            // flowLayoutPanel6
+            // 
+            flowLayoutPanel6.AutoSize = true;
+            flowLayoutPanel6.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel6.Controls.Add(pnlExtraItem);
+            flowLayoutPanel6.Location = new Point(6, 47);
+            flowLayoutPanel6.Name = "flowLayoutPanel6";
+            flowLayoutPanel6.Size = new Size(255, 91);
+            flowLayoutPanel6.TabIndex = 29;
+            // 
+            // pnlExtraItem
+            // 
+            pnlExtraItem.Controls.Add(txtItemFileName);
+            pnlExtraItem.Controls.Add(lblItemFileName);
+            pnlExtraItem.Controls.Add(txtItemTarget);
+            pnlExtraItem.Controls.Add(lblItemTarget);
+            pnlExtraItem.Location = new Point(3, 3);
+            pnlExtraItem.Name = "pnlExtraItem";
+            pnlExtraItem.Size = new Size(249, 85);
+            pnlExtraItem.TabIndex = 0;
+            pnlExtraItem.Visible = false;
+            // 
+            // txtItemFileName
+            // 
+            txtItemFileName.AutoScroll = true;
+            txtItemFileName.BackColor = SystemColors.Window;
+            txtItemFileName.BorderColor = Color.FromArgb(66, 124, 244);
+            txtItemFileName.BorderFocusColor = Color.HotPink;
+            txtItemFileName.BorderSize = 2;
+            txtItemFileName.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtItemFileName.ForeColor = Color.Black;
+            txtItemFileName.Location = new Point(78, 43);
+            txtItemFileName.Margin = new Padding(4);
+            txtItemFileName.Multiline = false;
+            txtItemFileName.Name = "txtItemFileName";
+            txtItemFileName.Padding = new Padding(7);
+            txtItemFileName.PasswordChar = false;
+            txtItemFileName.ReadOnly = false;
+            txtItemFileName.Size = new Size(171, 31);
+            txtItemFileName.TabIndex = 25;
+            txtItemFileName.Texts = "";
+            txtItemFileName.UnderlinedStyle = false;
+            // 
+            // lblItemFileName
+            // 
+            lblItemFileName.AutoSize = true;
+            lblItemFileName.Font = new Font("Microsoft Sans Serif", 9F);
+            lblItemFileName.Location = new Point(4, 51);
+            lblItemFileName.Name = "lblItemFileName";
+            lblItemFileName.Size = new Size(70, 15);
+            lblItemFileName.TabIndex = 24;
+            lblItemFileName.Text = "[File Name]";
+            lblItemFileName.TextResourceKey = "CharaStepItemFileNameLabel";
+            // 
+            // txtItemTarget
+            // 
+            txtItemTarget.AutoScroll = true;
+            txtItemTarget.BackColor = SystemColors.Window;
+            txtItemTarget.BorderColor = Color.FromArgb(66, 124, 244);
+            txtItemTarget.BorderFocusColor = Color.HotPink;
+            txtItemTarget.BorderSize = 2;
+            txtItemTarget.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtItemTarget.ForeColor = Color.Black;
+            txtItemTarget.Location = new Point(78, 4);
+            txtItemTarget.Margin = new Padding(4);
+            txtItemTarget.Multiline = false;
+            txtItemTarget.Name = "txtItemTarget";
+            txtItemTarget.Padding = new Padding(7);
+            txtItemTarget.PasswordChar = false;
+            txtItemTarget.ReadOnly = false;
+            txtItemTarget.Size = new Size(171, 31);
+            txtItemTarget.TabIndex = 23;
+            txtItemTarget.Texts = "";
+            txtItemTarget.UnderlinedStyle = false;
+            // 
+            // lblItemTarget
+            // 
+            lblItemTarget.AutoSize = true;
+            lblItemTarget.Font = new Font("Microsoft Sans Serif", 9F);
+            lblItemTarget.Location = new Point(4, 10);
+            lblItemTarget.Name = "lblItemTarget";
+            lblItemTarget.Size = new Size(48, 15);
+            lblItemTarget.TabIndex = 22;
+            lblItemTarget.Text = "[Target]";
+            lblItemTarget.TextResourceKey = "CharaStepItemTargetLabel";
+            // 
+            // flowLayoutPanel8
+            // 
+            flowLayoutPanel8.AutoSize = true;
+            flowLayoutPanel8.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel8.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel8.Location = new Point(3, 21);
+            flowLayoutPanel8.Margin = new Padding(0);
+            flowLayoutPanel8.Name = "flowLayoutPanel8";
+            flowLayoutPanel8.Size = new Size(0, 0);
+            flowLayoutPanel8.TabIndex = 4;
+            // 
+            // chkExtraItemUpdate
+            // 
+            chkExtraItemUpdate.AutoSize = true;
+            chkExtraItemUpdate.Font = new Font("Microsoft Sans Serif", 9F);
+            chkExtraItemUpdate.Location = new Point(9, 21);
+            chkExtraItemUpdate.Name = "chkExtraItemUpdate";
+            chkExtraItemUpdate.Size = new Size(116, 19);
+            chkExtraItemUpdate.TabIndex = 28;
+            chkExtraItemUpdate.Text = "[RequireUpdate]";
+            chkExtraItemUpdate.TextResourceKey = "RequireUpdate";
+            chkExtraItemUpdate.UseVisualStyleBackColor = true;
+            chkExtraItemUpdate.CheckedChanged += chkExtraItemUpdate_CheckedChanged;
+            // 
             // gbEffect
             // 
             gbEffect.AutoSize = true;
@@ -1297,7 +1438,7 @@
             gbEffect.Controls.Add(pnlEffect);
             gbEffect.FlatStyle = FlatStyle.Flat;
             gbEffect.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Bold);
-            gbEffect.Location = new Point(3, 1671);
+            gbEffect.Location = new Point(3, 1836);
             gbEffect.MinimumSize = new Size(267, 0);
             gbEffect.Name = "gbEffect";
             gbEffect.Size = new Size(267, 297);
@@ -1338,28 +1479,28 @@
             dgEffect.BackgroundColor = Color.FromArgb(207, 221, 238);
             dgEffect.BorderStyle = BorderStyle.None;
             dgEffect.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgEffect.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgEffect.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgEffect.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgEffect.Columns.AddRange(new DataGridViewColumn[] { colEffect, colRemoveEffect, colValue });
             dgEffect.GridColor = Color.FromArgb(128, 128, 255);
             dgEffect.Location = new Point(4, 58);
             dgEffect.MultiSelect = false;
             dgEffect.Name = "dgEffect";
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgEffect.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgEffect.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgEffect.RowTemplate.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgEffect.ScrollBars = ScrollBars.Vertical;
             dgEffect.SelectionMode = DataGridViewSelectionMode.CellSelect;
@@ -1435,7 +1576,7 @@
             Controls.Add(flowLayoutPanel3);
             Controls.Add(lblHeader);
             Name = "CharaStep";
-            Size = new Size(326, 2020);
+            Size = new Size(326, 2185);
             gbStatus.ResumeLayout(false);
             gbStatus.PerformLayout();
             flowLayoutPanel12.ResumeLayout(false);
@@ -1482,6 +1623,11 @@
             pnlEyeSightCharaPosition.PerformLayout();
             pnlEyeSightGroupMember.ResumeLayout(false);
             pnlEyeSightGroupMember.PerformLayout();
+            gbExtraItem.ResumeLayout(false);
+            gbExtraItem.PerformLayout();
+            flowLayoutPanel6.ResumeLayout(false);
+            pnlExtraItem.ResumeLayout(false);
+            pnlExtraItem.PerformLayout();
             gbEffect.ResumeLayout(false);
             gbEffect.PerformLayout();
             pnlEffect.ResumeLayout(false);
@@ -1588,5 +1734,14 @@
         private DataGridViewTextBoxColumn colEffect;
         private DataGridViewButtonColumn colRemoveEffect;
         private DataGridViewTextBoxColumn colValue;
+        private ExtendedGroupBox gbExtraItem;
+        private FlowLayoutPanel flowLayoutPanel6;
+        private Panel pnlExtraItem;
+        private CustomControls.RJControls.RJTextBox txtItemFileName;
+        private ExtendedLabel lblItemFileName;
+        private CustomControls.RJControls.RJTextBox txtItemTarget;
+        private ExtendedLabel lblItemTarget;
+        private FlowLayoutPanel flowLayoutPanel8;
+        private ExtendedCheckBox chkExtraItemUpdate;
     }
 }
