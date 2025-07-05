@@ -11,6 +11,7 @@ namespace COM3D2_CustomEventEditor
 
         public string Title;
         public string EventContents;
+        public bool IsCustomIcon = false;
         public string Icon;
         public int EditorVersion;
 

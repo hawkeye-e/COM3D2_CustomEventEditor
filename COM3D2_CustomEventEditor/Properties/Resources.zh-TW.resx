@@ -1242,6 +1242,9 @@
   <data name="ScnInfoAuthorLabel" xml:space="preserve">
     <value>Author</value>
   </data>
+  <data name="ScnInfoCustomIconLabel" xml:space="preserve">
+    <value>Custom Icon</value>
+  </data>
   <data name="ScnInfoEventContentLabel" xml:space="preserve">
     <value>Event Content</value>
   </data>

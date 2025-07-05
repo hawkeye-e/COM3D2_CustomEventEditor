@@ -271,6 +271,9 @@ namespace COM3D2_CustomEventEditor
                 }
             }
 
+            if (Global.ScenarioDefinition.IsCustomIcon)
+                fileInUsed.Add(Global.ScenarioDefinition.Icon);
+
 
 
             try

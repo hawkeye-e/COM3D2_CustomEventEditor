@@ -13,6 +13,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
 {
     public partial class ScenarioInfo : StepEditBase
     {
+        private string _CustomIconFileName = "";
 
         public ScenarioInfo() : base()
         {
@@ -25,7 +26,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             Visible = true;
         }
 
-        public void HidePanel() {  Visible = false; }
+        public void HidePanel() { Visible = false; }
 
         public void LoadData()
         {
@@ -35,11 +36,23 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             txtAuthor.Texts = Global.ScenarioDefinition.Author;
             txtLanguage.Texts = Global.ScenarioDefinition.Language;
 
-            rbIconLove.Checked = Global.ScenarioDefinition.Icon == "event_love_icon";
-            rbIconNTR.Checked = Global.ScenarioDefinition.Icon == "event_icon_ntr";
-            rbIconNPC.Checked = Global.ScenarioDefinition.Icon == "event_npc_icon";
-            rbIconIdol.Checked = Global.ScenarioDefinition.Icon == "event_idol_icon";
-            rbIconExtra.Checked = Global.ScenarioDefinition.Icon == "event_extra_icon";
+
+            rbCustomIcon.Checked = Global.ScenarioDefinition.IsCustomIcon;
+            if (rbCustomIcon.Checked)
+            {
+                _CustomIconFileName = Global.ScenarioDefinition.Icon;
+                SetCustomIconToRadioButton();
+            }
+            else
+            {
+                rbIconLove.Checked = Global.ScenarioDefinition.Icon == "event_love_icon";
+                rbIconNTR.Checked = Global.ScenarioDefinition.Icon == "event_icon_ntr";
+                rbIconNPC.Checked = Global.ScenarioDefinition.Icon == "event_npc_icon";
+                rbIconIdol.Checked = Global.ScenarioDefinition.Icon == "event_idol_icon";
+                rbIconExtra.Checked = Global.ScenarioDefinition.Icon == "event_extra_icon";
+
+                ResetCustomIconRadioButton();
+            }
         }
 
         public override void SaveData()
@@ -50,16 +63,25 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             Global.ScenarioDefinition.Author = txtAuthor.Texts;
             Global.ScenarioDefinition.Language = txtLanguage.Texts;
 
-            if (rbIconLove.Checked)
-                Global.ScenarioDefinition.Icon = "event_love_icon";
-            else if (rbIconNTR.Checked)
-                Global.ScenarioDefinition.Icon = "event_icon_ntr";
-            else if (rbIconNPC.Checked)
-                Global.ScenarioDefinition.Icon = "event_npc_icon";
-            else if (rbIconIdol.Checked)
-                Global.ScenarioDefinition.Icon = "event_idol_icon";
-            else if (rbIconExtra.Checked)
-                Global.ScenarioDefinition.Icon = "event_extra_icon";
+            if (rbCustomIcon.Checked)
+            {
+                Global.ScenarioDefinition.IsCustomIcon = true;
+                Global.ScenarioDefinition.Icon = _CustomIconFileName;
+            }
+            else
+            {
+                Global.ScenarioDefinition.IsCustomIcon = false;
+                if (rbIconLove.Checked)
+                    Global.ScenarioDefinition.Icon = "event_love_icon";
+                else if (rbIconNTR.Checked)
+                    Global.ScenarioDefinition.Icon = "event_icon_ntr";
+                else if (rbIconNPC.Checked)
+                    Global.ScenarioDefinition.Icon = "event_npc_icon";
+                else if (rbIconIdol.Checked)
+                    Global.ScenarioDefinition.Icon = "event_idol_icon";
+                else if (rbIconExtra.Checked)
+                    Global.ScenarioDefinition.Icon = "event_extra_icon";
+            }
         }
 
         public override void ReloadData()
@@ -74,5 +96,33 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             form.ShowDialog();
         }
 
+        private void btnCustomIconSelectFile_Click(object sender, EventArgs e)
+        {
+            var result = openFileDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                //copy the selected file to workspace
+                EditorFileManager.CopyFileToWorkSpace(openFileDialog.FileName, openFileDialog.SafeFileName);
+
+                _CustomIconFileName = openFileDialog.SafeFileName;
+
+                SetCustomIconToRadioButton();
+                rbCustomIcon.Checked = true;
+            }
+        }
+
+        private void SetCustomIconToRadioButton()
+        {
+            string path = EditorFileManager.WORKSPACE_DIR_PATH + "/" + _CustomIconFileName;
+            using (var img = new Bitmap(path))
+            {
+                rbCustomIcon.Image = (Image)(new Bitmap(img, new Size(60, 60)));
+            }
+        }
+
+        private void ResetCustomIconRadioButton()
+        {
+            rbCustomIcon.Image = Properties.Resources.custom_icon_blank;
+        }
     }
 }

@@ -1745,6 +1745,16 @@ namespace COM3D2_CustomEventEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap custom_icon_blank {
+            get {
+                object obj = ResourceManager.GetObject("custom_icon_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to File Name.
         /// </summary>
         internal static string CustomAnimFormFileName {
@@ -3997,6 +4007,15 @@ namespace COM3D2_CustomEventEditor.Properties {
         internal static string ScnInfoAuthorLabel {
             get {
                 return ResourceManager.GetString("ScnInfoAuthorLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Custom Icon.
+        /// </summary>
+        internal static string ScnInfoCustomIconLabel {
+            get {
+                return ResourceManager.GetString("ScnInfoCustomIconLabel", resourceCulture);
             }
         }
         

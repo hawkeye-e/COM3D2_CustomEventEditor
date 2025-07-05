@@ -42,12 +42,16 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             lblIcon = new ExtendedLabel();
             rbIconLove = new RadioButton();
             panel1 = new Panel();
+            lblCustomIcon = new ExtendedLabel();
+            btnCustomIconSelectFile = new ExtendedButton();
+            rbCustomIcon = new RadioButton();
             rbIconExtra = new RadioButton();
             rbIconIdol = new RadioButton();
             rbIconNTR = new RadioButton();
             rbIconNPC = new RadioButton();
             lblMaidRequirement = new ExtendedLabel();
             btnMaidRequirement = new ExtendedButton();
+            openFileDialog = new OpenFileDialog();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -88,6 +92,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             txtTitle.Name = "txtTitle";
             txtTitle.Padding = new Padding(7);
             txtTitle.PasswordChar = false;
+            txtTitle.ReadOnly = false;
             txtTitle.Size = new Size(299, 31);
             txtTitle.TabIndex = 4;
             txtTitle.Texts = "";
@@ -107,6 +112,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             txtEventContent.Name = "txtEventContent";
             txtEventContent.Padding = new Padding(7);
             txtEventContent.PasswordChar = false;
+            txtEventContent.ReadOnly = false;
             txtEventContent.Size = new Size(299, 151);
             txtEventContent.TabIndex = 5;
             txtEventContent.Texts = "";
@@ -138,6 +144,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             txtAuthor.Name = "txtAuthor";
             txtAuthor.Padding = new Padding(7);
             txtAuthor.PasswordChar = false;
+            txtAuthor.ReadOnly = false;
             txtAuthor.Size = new Size(299, 31);
             txtAuthor.TabIndex = 8;
             txtAuthor.Texts = "";
@@ -169,6 +176,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             txtLanguage.Name = "txtLanguage";
             txtLanguage.Padding = new Padding(7);
             txtLanguage.PasswordChar = false;
+            txtLanguage.ReadOnly = false;
             txtLanguage.Size = new Size(300, 31);
             txtLanguage.TabIndex = 10;
             txtLanguage.Texts = "";
@@ -210,6 +218,9 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             // 
             // panel1
             // 
+            panel1.Controls.Add(lblCustomIcon);
+            panel1.Controls.Add(btnCustomIconSelectFile);
+            panel1.Controls.Add(rbCustomIcon);
             panel1.Controls.Add(rbIconExtra);
             panel1.Controls.Add(rbIconIdol);
             panel1.Controls.Add(rbIconNTR);
@@ -217,8 +228,42 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             panel1.Controls.Add(rbIconLove);
             panel1.Location = new Point(4, 438);
             panel1.Name = "panel1";
-            panel1.Size = new Size(299, 147);
+            panel1.Size = new Size(299, 258);
             panel1.TabIndex = 14;
+            // 
+            // lblCustomIcon
+            // 
+            lblCustomIcon.AutoSize = true;
+            lblCustomIcon.Font = new Font("Microsoft Sans Serif", 9F);
+            lblCustomIcon.Location = new Point(3, 137);
+            lblCustomIcon.Name = "lblCustomIcon";
+            lblCustomIcon.Size = new Size(78, 15);
+            lblCustomIcon.TabIndex = 20;
+            lblCustomIcon.Text = "[CustomIcon]";
+            lblCustomIcon.TextResourceKey = "ScnInfoCustomIconLabel";
+            // 
+            // btnCustomIconSelectFile
+            // 
+            btnCustomIconSelectFile.FlatStyle = FlatStyle.Flat;
+            btnCustomIconSelectFile.Font = new Font("Microsoft Sans Serif", 8F);
+            btnCustomIconSelectFile.Location = new Point(92, 175);
+            btnCustomIconSelectFile.Name = "btnCustomIconSelectFile";
+            btnCustomIconSelectFile.Size = new Size(75, 23);
+            btnCustomIconSelectFile.TabIndex = 20;
+            btnCustomIconSelectFile.Text = "[Select File]";
+            btnCustomIconSelectFile.TextResourceKey = "SelectFile";
+            btnCustomIconSelectFile.UseVisualStyleBackColor = true;
+            btnCustomIconSelectFile.Click += btnCustomIconSelectFile_Click;
+            // 
+            // rbCustomIcon
+            // 
+            rbCustomIcon.FlatStyle = FlatStyle.Flat;
+            rbCustomIcon.Image = Properties.Resources.custom_icon_blank;
+            rbCustomIcon.Location = new Point(3, 156);
+            rbCustomIcon.Name = "rbCustomIcon";
+            rbCustomIcon.Size = new Size(74, 61);
+            rbCustomIcon.TabIndex = 18;
+            rbCustomIcon.UseVisualStyleBackColor = true;
             // 
             // rbIconExtra
             // 
@@ -264,7 +309,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             // 
             lblMaidRequirement.AutoSize = true;
             lblMaidRequirement.Font = new Font("Microsoft Sans Serif", 9F);
-            lblMaidRequirement.Location = new Point(0, 599);
+            lblMaidRequirement.Location = new Point(0, 699);
             lblMaidRequirement.Name = "lblMaidRequirement";
             lblMaidRequirement.Size = new Size(116, 15);
             lblMaidRequirement.TabIndex = 16;
@@ -275,7 +320,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             // 
             btnMaidRequirement.FlatStyle = FlatStyle.Flat;
             btnMaidRequirement.Font = new Font("Microsoft Sans Serif", 8F);
-            btnMaidRequirement.Location = new Point(4, 630);
+            btnMaidRequirement.Location = new Point(4, 730);
             btnMaidRequirement.Name = "btnMaidRequirement";
             btnMaidRequirement.Size = new Size(75, 23);
             btnMaidRequirement.TabIndex = 19;
@@ -283,6 +328,10 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             btnMaidRequirement.TextResourceKey = "Edit";
             btnMaidRequirement.UseVisualStyleBackColor = true;
             btnMaidRequirement.Click += btnMaidRequirement_Click;
+            // 
+            // openFileDialog
+            // 
+            openFileDialog.Filter = "Image files|*.gif;*.jpg;*.jpeg;*.bmp;*.png";
             // 
             // ScenarioInfo
             // 
@@ -306,6 +355,7 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
             Name = "ScenarioInfo";
             Size = new Size(310, 799);
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -330,5 +380,9 @@ namespace COM3D2_CustomEventEditor.CustomControl.StepEdit
         private RadioButton rbIconNTR;
         private ExtendedLabel lblMaidRequirement;
         private ExtendedButton btnMaidRequirement;
+        private ExtendedLabel lblCustomIcon;
+        private ExtendedButton btnCustomIconSelectFile;
+        private RadioButton rbCustomIcon;
+        private OpenFileDialog openFileDialog;
     }
 }
