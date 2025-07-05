@@ -6,10 +6,10 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <FileVersion>0.1.1</FileVersion>
+    <FileVersion>0.2.0</FileVersion>
     <ApplicationIcon>Resources\favicon.ico</ApplicationIcon>
 	<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
-	<Version>0.1.1</Version>
+	<Version>0.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
